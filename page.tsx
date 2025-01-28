@@ -2,6 +2,7 @@ import { Globe, Menu } from "lucide-react"
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible"
+import { IndustrySlider } from "./components/industry-slider"
 
 export default function Home() {
   return (
@@ -45,7 +46,7 @@ export default function Home() {
         <div className="mt-8 lg:mt-0 lg:w-1/2">
           <div className="rounded-3xl overflow-hidden">
             <Image
-              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot%202025-01-27%20023312-xaqsyRc6pOX3SgwGJKXPM8nFchfETs.png"
+              src={'./dummy.png'}
               alt="Modern office workspace"
               width={800}
               height={600}
@@ -55,23 +56,40 @@ export default function Home() {
         </div>
       </section>
 
+
       {/* Industry Expertise */}
-      <section className="px-4 md:px-16 lg:px-24 py-12 md:py-24 relative">
-        <div className="absolute right-0 top-0 w-64 h-64 bg-[#B8860B] rounded-full opacity-20 blur-3xl"></div>
-        <div className="relative z-10 max-w-4xl mx-auto">
-          <h2 className="text-2xl md:text-3xl font-serif text-[#B8860B] mb-8">Industry Expertise</h2>
-          <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 md:p-8 shadow-lg">
-            <ul className="space-y-3 text-gray-800">
-              <li>• Financial Services & Banking</li>
-              <li>• Consumer Goods & Retail</li>
-              <li>• Telecom, IT, Electronics</li>
-              <li>• Automotives</li>
-              <li>• Transportation & Logistics</li>
-              <li>• Pharmaceuticals & Life Sciences</li>
-            </ul>
-          </div>
+      <div className="bg-[#FDF6EC] py-12">
+      {/* Web version of the heading */}
+      <h2 className="text-3xl md:text-3xl font-serif text-[#B8860B] mb-36 z-10 relative lg:block hidden mx-24">
+  Unlock Your Potential with Dazzle
+</h2>
+
+
+      <section className="md:px-20 lg:px-20 px-4 relative lg:flex lg:justify-center lg:items-center">
+        <div className="absolute inset-0 z-0 flex justify-center items-center">
+          <Image
+            src="./globe.svg" // Path to your image in the public folder
+            alt="Background Image"
+            layout="intrinsic"
+            width={400}  // Specify width
+            height={200} // Specify height
+            objectFit="contain"
+            className="lg:mb-36"
+          />
+          
+        </div>
+
+        {/* Mobile version of the heading */}
+        <h2 className="text-2xl md:text-2xl font-serif text-[#B8860B] mb-40 z-10 relative lg:hidden text-center">
+        Unlock Your Potential with Dazzle
+        </h2>
+
+        <div className="lg:flex lg:justify-center lg:items-center lg:mt-16 z-10 relative">
+          <IndustrySlider />
         </div>
       </section>
+      </div>
+
 
       {/* Already Chosen By */}
       <section className="px-4 md:px-16 lg:px-24 py-12 md:py-24">
