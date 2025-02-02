@@ -1,9 +1,10 @@
 import Image from "next/image";
-import Facebook from "./../public/facebook.svg";
-import Whatsapp from "./../public/whatsapp.svg";
-import Instagram from "./../public/insta.svg";
-import Twitter from "./../public/twitter.svg";
-import Linkedin from "./../public/linkedin.svg";
+import Facebook from "./facebook.svg";
+import Whatsapp from "./whatsapp.svg";
+// import Instagram from "./../public/insta.svg";
+import Instagram from "./Insta.svg"
+import Twitter from "./twitter.svg"
+import Linkedin from "./linkedin.svg";
 import { Globe } from "lucide-react";
 
 const FooterDazzle = () => {
