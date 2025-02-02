@@ -1,5 +1,3 @@
-"use client"
-
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel"
 import { IndustryCard } from "./IndustryCard"
 
@@ -59,21 +57,20 @@ export function IndustrySlider() {
 
       {/* Mobile Carousel - Hidden on desktop */}
       <div className="md:hidden">
-        <Carousel>
+        <Carousel className="overflow-visible">
           <CarouselContent>
             {industryData.map((industry, index) => (
-              <CarouselItem key={index}>
+              <CarouselItem key={index} className="max-w-[85%] shrink-0 snap-center">
                 <div className="p-2">
                   <IndustryCard {...industry} />
                 </div>
               </CarouselItem>
             ))}
           </CarouselContent>
-          {/* <CarouselPrevious /> */}
-          {/* <CarouselNext /> */}
+          <CarouselPrevious />
+          <CarouselNext />
         </Carousel>
       </div>
     </div>
   )
 }
-
