@@ -3,6 +3,7 @@ import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible"
 import { IndustrySlider } from "./components/industry-slider"
+import { MarqueeDemo } from "./components/MarqueeComp"
 
 export default function Home() {
   return (
@@ -92,20 +93,9 @@ export default function Home() {
 
 
       {/* Already Chosen By */}
-      <section className="px-4 md:px-16 lg:px-24 py-12 md:py-24">
-        <h2 className="text-2xl md:text-3xl font-serif text-[#B8860B] mb-12 text-center">Already Chosen By</h2>
-        <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-8 max-w-6xl mx-auto">
-          {[1, 2, 3, 4, 5, 6].map((index) => (
-            <div key={index} className="aspect-[3/2] relative">
-              <Image
-                src={`https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot%202025-01-27%20023327-qgMjUBbPNY3ahEugVSIwWCfjnhFylC.png`}
-                alt={`Client logo ${index}`}
-                fill
-                className="object-contain"
-              />
-            </div>
-          ))}
-        </div>
+      <section className="md:px-16 lg:px-5 py-12 md:py-24 bg-[#FDF6EC]">
+        
+       <MarqueeDemo/>
       </section>
 
       {/* Case Studies */}
