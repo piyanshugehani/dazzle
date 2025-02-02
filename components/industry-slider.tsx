@@ -67,8 +67,7 @@ export function IndustrySlider() {
               </CarouselItem>
             ))}
           </CarouselContent>
-          <CarouselPrevious />
-          <CarouselNext />
+         
         </Carousel>
       </div>
     </div>
