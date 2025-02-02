@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button"
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible"
 import { IndustrySlider } from "./components/industry-slider"
 import { MarqueeDemo } from "./components/MarqueeComp"
+import CaseStudies from "./components/CaseStudyComp"
 
 export default function Home() {
   return (
@@ -94,31 +95,12 @@ export default function Home() {
 
       {/* Already Chosen By */}
       <section className="md:px-16 lg:px-5 py-12 md:py-24 bg-[#FDF6EC]">
-        
        <MarqueeDemo/>
       </section>
 
       {/* Case Studies */}
-      <section className="px-4 md:px-16 lg:px-24 py-12 md:py-24 bg-[#FDF6EC]">
-        <h2 className="text-2xl md:text-3xl font-serif text-[#B8860B] mb-12 text-center">Case Studies</h2>
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
-          <div className="bg-white/80 backdrop-blur-sm rounded-xl p-6 shadow-lg">
-            <h3 className="font-bold mb-2">SAMSUNG</h3>
-            <p className="text-sm text-gray-600">Advertising Tracking Research</p>
-          </div>
-          <div className="bg-white/80 backdrop-blur-sm rounded-xl p-6 shadow-lg">
-            <h3 className="font-bold mb-2">Seagram's</h3>
-            <p className="text-sm text-gray-600">Fuel Vodka Packaging Research</p>
-          </div>
-          <div className="bg-white/80 backdrop-blur-sm rounded-xl p-6 shadow-lg">
-            <h3 className="font-bold mb-2">ITC Limited</h3>
-            <p className="text-sm text-gray-600">Shop Census for Bingo</p>
-          </div>
-          <div className="bg-white/80 backdrop-blur-sm rounded-xl p-6 shadow-lg">
-            <h3 className="font-bold mb-2">SDL</h3>
-            <p className="text-sm text-gray-600">Research for the TV Programme</p>
-          </div>
-        </div>
+      <section className="px-4 md:px-16 lg:px-24 py-12 md:pt-0 md:pb-20 bg-[#FDF6EC]">
+        <CaseStudies/>
       </section>
 
       {/* Field Quality Protocols */}
