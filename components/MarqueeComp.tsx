@@ -82,12 +82,12 @@ export function MarqueeDemo() {
   return (
     <div className="pt-4 relative flex md:h-[500px] w-full flex-col items-center justify-center overflow-hidden bg-[#ffefda] rounded-lg shadow-md md:shadow-[0px_0px_10px_rgba(0,0,0,0.15)]">
       <h2 className="text-2xl md:text-3xl font-serif text-[#B8860B] mb-6 text-center">Already Chosen By</h2>
-      <Marquee pauseOnHover className="[--duration:20s]">
+      <Marquee pauseOnHover className="[--duration:50s]">
         {firstRow.map((review) => (
           <ReviewCard key={review.username} {...review} />
         ))}
       </Marquee>
-      <Marquee reverse pauseOnHover className="[--duration:0s]">
+      <Marquee reverse pauseOnHover className="[--duration:20s]">
         {secondRow.map((review) => (
           <ReviewCard key={review.username} {...review} />
         ))}

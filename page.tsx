@@ -1,10 +1,11 @@
 import { Globe, Menu } from "lucide-react"
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
-import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible"
 import { IndustrySlider } from "./components/industry-slider"
 import { MarqueeDemo } from "./components/MarqueeComp"
 import CaseStudies from "./components/CaseStudyComp"
+import FieldProtocols from "./components/ProtocolComp"
+import FooterDazzle from "./components/FooterDazzle"
 
 export default function Home() {
   return (
@@ -104,43 +105,11 @@ export default function Home() {
       </section>
 
       {/* Field Quality Protocols */}
-      <section className="px-4 md:px-16 lg:px-24 py-12 md:py-24">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-2xl md:text-3xl font-serif text-[#B8860B] mb-4">Field Quality Protocols</h2>
-          <p className="text-gray-600 mb-8">Rigorously implemented and executed in all stages of field operations</p>
-          <div className="space-y-4">
-            {["Set up Stage", "Fieldwork Stage", "Reporting to Client"].map((stage) => (
-              <Collapsible key={stage} className="w-full">
-                <CollapsibleTrigger className="w-full bg-[#F3E6D0] hover:bg-[#E6D0B3] rounded-xl px-6 py-4 text-left font-medium transition-colors">
-                  {stage}
-                </CollapsibleTrigger>
-                <CollapsibleContent className="p-6">
-                  <p className="text-gray-600">Detailed information about {stage}</p>
-                </CollapsibleContent>
-              </Collapsible>
-            ))}
-          </div>
-        </div>
-      </section>
+      <FieldProtocols/>
 
       {/* Footer */}
-      <footer className="bg-[#1A1A1A] text-white py-12 px-4 md:px-16">
-        <div className="max-w-6xl mx-auto">
-          <div className="flex justify-center gap-6 mb-8">
-            {["YouTube", "Facebook", "Twitter", "LinkedIn", "Instagram"].map((social) => (
-              <div
-                key={social}
-                className="w-10 h-10 rounded-full bg-white/20 hover:bg-white/30 transition-colors cursor-pointer"
-              />
-            ))}
-          </div>
-          <div className="flex flex-col items-center gap-3 text-center">
-            <Globe className="w-8 h-8" />
-            <div className="font-semibold text-xl">DAZZLE</div>
-            <div className="text-sm opacity-70">A Market Research Company</div>
-          </div>
-        </div>
-      </footer>
+      <FooterDazzle/>
+      
     </div>
   )
 }
