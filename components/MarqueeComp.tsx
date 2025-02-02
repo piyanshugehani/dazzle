@@ -80,7 +80,7 @@ const ReviewCard = ({
 
 export function MarqueeDemo() {
   return (
-    <div className="sm:mt-[-10] relative flex md:h-[500px] w-full flex-col items-center justify-center overflow-hidden rounded-lg shadow-md md:shadow-[0px_0px_10px_rgba(0,0,0,0.15)]">
+    <div className="sm:mt-[-10] relative flex md:h-[500px] w-full flex-col items-center justify-center overflow-hidden bg-[#ffefda] rounded-lg shadow-md md:shadow-[0px_0px_10px_rgba(0,0,0,0.15)]">
       <h2 className="text-2xl md:text-3xl font-serif text-[#B8860B] mb-12 text-center">Already Chosen By</h2>
       <Marquee pauseOnHover className="[--duration:20s]">
         {firstRow.map((review) => (
