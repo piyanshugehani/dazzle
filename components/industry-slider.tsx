@@ -5,40 +5,40 @@ const industryData = [
   {
     title: "Industry Expertise",
     items: [
-      "Financial Services & Banking",
-      "Consumer Goods & Retail",
-      "Telecom, IT, Electronics",
-      "Automotives, Transportation & Logistics",
-      "Pharmaceuticals & Life Sciences",
+      "> Financial Services & Banking",
+      "> Consumer Goods & Retail",
+      "> Telecom, IT, Electronics",
+      "> Automotives, Transportation & Logistics",
+      "> Pharmaceuticals & Life Sciences",
     ],
   },
   {
     title: "Competencies",
     items: [
-      "Primary data collection",
-      "Data Analytics",
-      "Intellectual Property & Legal",
-      "Process Services",
-      "Knowledge Technology",
+      "> Primary data collection",
+      "> Data Analytics",
+      "> Intellectual Property & Legal",
+      "> Process Services",
+      "> Knowledge Technology",
     ],
   },
   {
     title: "Coverage & Market",
     items: [
-      "Operation centers in Mumbai, Delhi, Bangalore and Chennai",
-      "Multi-lingual capabilities (50+)",
-      "Field offices in over 21 locations",
-      "24x5 Around-the-Clock Project Execution",
+      "> Operation centers in Mumbai, Delhi, Bangalore and Chennai",
+      "> Multi-lingual capabilities (50+)",
+      "> Field offices in over 21 locations",
+      "> 24x5 Project Execution",
     ],
   },
   {
     title: "Industry Solutions",
     items: [
-      "Custom Research Solutions",
-      "Market Intelligence",
-      "Business Analytics",
-      "Digital Transformation",
-      "Strategic Consulting",
+      "> Custom Research Solutions",
+      "> Market Intelligence",
+      "> Business Analytics",
+      "> Digital Transformation",
+      "> Strategic Consulting",
     ],
   },
 ]
@@ -47,7 +47,7 @@ export function IndustrySlider() {
   return (
     <div>
       {/* Desktop Grid - Hidden on mobile */}
-      <div className="hidden md:grid md:grid-cols-2 lg:grid-cols-4 gap-6 p-6">
+      <div className="hidden md:grid md:grid-cols-2 lg:grid-cols-4 gap-6 p-6 font-subheading">
         {industryData.map((industry, index) => (
           <div key={index}>
             <IndustryCard {...industry} />

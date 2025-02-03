@@ -32,10 +32,10 @@ const FooterDazzle = () => {
         </div>
 
         {/* Branding */}
-        <div className="flex flex-col items-center gap-3 text-center">
+        <div className="flex flex-col items-center gap-1 text-center">
           <Globe className="w-8 h-8" />
-          <div className="font-semibold text-xl">DAZZLE</div>
-          <div className="text-sm opacity-70">A Market Research Company</div>
+          <div className="font-semibold text-xl font-logo">DAZZLE</div>
+          <div className="text-sm opacity-70 font-subheading">A Market Research Company</div>
         </div>
       </div>
     </footer>
