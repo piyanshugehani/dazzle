@@ -16,7 +16,7 @@ export default function Home() {
       {/* Hero Section */}
       <section className="mt-12 px-4 md:px-16 lg:px-24 py-12 md:py-24 lg:min-h-[80vh] lg:flex lg:items-center lg:gap-12">
         <div className="lg:w-1/2 space-y-6">
-          <h1 className="text-[#B8860B] font-heading text-5xl md:text-5xl lg:text-6xl mt-16">
+          <h1 className="text-[#B8860B] font-heading text-6xl md:text-5xl lg:text-6xl mt-16">
             DAZZLE
           </h1>
           <h2 className="text-xl md:text-xl lg:text-2xl font-subheading">
