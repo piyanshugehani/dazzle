@@ -51,7 +51,7 @@ export default function FieldProtocols() {
   }
 
   return (
-    <section className="w-full bg-gradient-to-b from-secondary to-gray-300 py-16 md:py-24">
+    <section className="w-full bg-gradient-to-b from-secondary to-orange-100 py-16 md:py-24">
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto space-y-8">
           <div className="space-y-4 text-center">
@@ -92,7 +92,7 @@ export default function FieldProtocols() {
                   transition={{ duration: 0.3, ease: "easeInOut" }}
                   className="overflow-hidden"
                 >
-                  <div className="mt-2 p-4 rounded-lg bg-accent border shadow-inner">
+                  <div className="mt-2 p-4 rounded-lg bg-secondary border shadow-inner">
                     <ul className="list-disc list-inside space-y-2">
                       {protocol.items.map((item, index) => (
                         <li key={index} className="text-base text-text/80 font-content">
