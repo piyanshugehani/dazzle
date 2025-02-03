@@ -26,8 +26,8 @@ export default function CaseStudies() {
 
   return (
     <div className="p-6 bg-[#FDF6EC]">
-      <h2 className="text-[#8B4513] text-3xl font-serif mb-8 text-center">Case Studies</h2>
-      <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
+      <h2 className="text-[#8B4513] text-3xl md:text-4xl font-heading mb-8 text-center">Case Studies</h2>
+      <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto font-subheading">
         {cases.map((caseStudy, index) => (
           <Card
             key={index}

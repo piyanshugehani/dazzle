@@ -51,25 +51,25 @@ export default function FieldProtocols() {
   }
 
   return (
-    <div className="w-full min-h-[300px] bg-gradient-to-b from-[#e9dec8] to-[#cbac72] p-4 md:pt-12 md:pb-20">
+    <div className="w-full min-h-[300px] bg-gradient-to-b from-[#e9dec8] to-[#cbac72] p-6 pb-16 md:pt-12">
       <div className="max-w-2xl mx-auto space-y-6">
         <div className="space-y-2">
-          <h1 className="text-2xl md:text-3xl font-bold text-amber-950/90">Field Quality Protocols</h1>
-          <p className="text-sm md:text-base text-amber-950/80 max-w-md">
+          <h1 className="text-2xl md:text-3xl text-amber-950/90 font-heading">Field Quality Protocols</h1>
+          <p className="text-sm md:text-base text-amber-950/80 max-w-md font-content">
             Rigorously implemented and executed in all stages of field operations
           </p>
         </div>
 
-        <div className="space-y-4">
+        <div className="space-y-4 font-subheading">
           {protocolsData.map((protocol) => (
             <div key={protocol.title} className="w-full">
               <button onClick={() => toggleSection(protocol.title)} className="w-full group">
                 <div
-                  className="relative w-full p-3.5 rounded-xl bg-gradient-to-r from-[#E6D0B3] to-neutral-200 
+                  className="relative w-full p-2.5 rounded-xl bg-gradient-to-r from-[#E6D0B3] to-neutral-200 
                               border border-amber-950/60 shadow-lg hover:shadow-xl transition-all duration-200
                               flex items-center justify-between"
                 >
-                  <span className="text-left text-base md:text-lg font-medium text-amber-950">{protocol.title}</span>
+                  <span className="text-center md:text-md font-medium text-amber-950">{protocol.title}</span>
                   <ChevronDown
                     className={cn(
                       "w-6 h-6 text-amber-950/90 transition-transform duration-200",
@@ -80,7 +80,7 @@ export default function FieldProtocols() {
               </button>
               {openSections[protocol.title] && (
                 <div className="my-4 ml-4 p-4 rounded-lg bg-amber-50/70 border border-amber-200/60 shadow-inner">
-                  <ul className="list-disc list-inside space-y-2">
+                  <ul className="list-disc list-inside space-y-2 font-content">
                     {protocol.items.map((item, index) => (
                       <li key={index} className="text-sm md:text-base text-amber-950/80">
                         {item}
