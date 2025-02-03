@@ -42,7 +42,7 @@ const HeaderComp = () => {
             animate={{ y: 0, opacity: 1 }}
             exit={{ y: "-100%", opacity: 0 }}
             transition={{ type: "spring", stiffness: 120, damping: 15 }}
-            className="fixed top-0 left-0 w-full bg-[#FDF6EC] shadow-md flex flex-col items-center gap-6 p-6 z-50 lg:hidden"
+            className="fixed top-0 left-0 w-full bg-secondary shadow-md flex flex-col items-center gap-6 p-6 z-50 lg:hidden"
           >
             <button className="self-end p-2" onClick={() => setIsOpen(false)}>
               <X className="w-6 h-6" />
