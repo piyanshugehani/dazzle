@@ -81,7 +81,8 @@ const ReviewCard = ({
 export function MarqueeDemo() {
   return (
     <div className="py-2 relative flex md:h-[500px] w-full flex-col items-center justify-center overflow-hidden bg-secondary rounded-lg md:shadow-[0px_0px_10px_rgba(0,0,0,0.15)]">
-      <h2 className="text-3xl md:text-4xl font-heading italic text-button mb-4 font-bold">Already Chosen By</h2>
+      <h2 className="text-3xl md:text-4xl font-heading italic mb-4 font-bold bg-gradient-to-r from-orange-600 via-button to-button
+               text-transparent bg-clip-text">Already Chosen By</h2>
       <Marquee pauseOnHover className="[--duration:30s] font-content">
         {firstRow.map((review) => (
           <ReviewCard key={review.username} {...review} />

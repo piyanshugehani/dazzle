@@ -55,7 +55,8 @@ export default function FieldProtocols() {
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto space-y-8">
           <div className="space-y-4 text-center">
-            <h2 className="text-3xl md:text-3xl lg:text-4xl text-button font-heading font-bold tracking-tight">
+            <h2 className="text-3xl md:text-3xl lg:text-4xl bg-gradient-to-r from-orange-600 via-button to-button
+               text-transparent bg-clip-text font-heading font-bold tracking-tight">
               Field Quality Protocols
             </h2>
             <p className="text-lg md:text-xl text-text/80 max-w-2xl mx-auto font-subheading">

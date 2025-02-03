@@ -26,7 +26,7 @@ const config: Config = {
           foreground: "hsl(var(--primary-foreground))"
         },
         button: {
-          DEFAULT: "#FF8225"
+          DEFAULT: "#873C03"
         },
         secondary: {
           DEFAULT: "#EAEAEA",
@@ -66,10 +66,10 @@ const config: Config = {
         }
       },
       fontFamily: {
-        logo: ["'Fancy Monospace Text'", "monospace"], // Replace with actual monospace font
+        logo: ["'Fancy Monospace Text'", "monospace"], 
         heading: ["'DM Serif Display'", "serif"],
         subheading: ["'Poppins'", "sans-serif"],
-        content: ["'Merriweather'", "serif"]
+        content: ["'Merriweather'"]
       },
       borderRadius: {
         lg: "var(--radius)",

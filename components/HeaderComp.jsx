@@ -23,7 +23,7 @@ const HeaderComp = () => {
         <a href="#" className="hover:text-button">Services</a>
         <a href="#" className="hover:text-button">About</a>
         <a href="#" className="hover:text-button">Contact</a>
-        <button className="bg-button hover:bg-[#8B6508] px-4 py-2 rounded-md text-white">
+        <button className="bg-gradient-to-br from-orange-600 to-button hover:bg-[#8B6508] px-4 py-2 rounded-md text-white">
           Get Started
         </button>
       </nav>

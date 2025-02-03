@@ -16,16 +16,19 @@ export default function Home() {
       {/* Hero Section */}
       <section className="mt-12 px-4 md:px-16 lg:px-24 py-12 md:py-24 lg:min-h-[80vh] lg:flex lg:items-center lg:gap-12">
         <div className="lg:w-1/2 space-y-6">
-          <h1 className="text-button font-heading font-bold text-6xl md:text-5xl lg:text-6xl mt-16">
-            DAZZLE
-          </h1>
+        <h1 className="text-6xl md:text-5xl lg:text-6xl font-heading font-bold mt-16 
+               bg-gradient-to-r from-button via-orange-700 to-orange-700
+               text-transparent bg-clip-text">
+  DAZZLE
+</h1>
+
           <h2 className="text-xl md:text-xl lg:text-2xl font-subheading">
             Transforming Research into Actionable Intelligence
           </h2>
           <p className="text-gray-600 md:text-lg font-content">
             India’s leading hub for data-driven insights, revolutionizing analytics with precision, innovation, and expertise.
           </p>
-          <Button className="bg-button hover:bg-[#8B6508] text-white px-8 py-6 rounded-full text-lg font-content">
+          <Button className="bg-gradient-to-br from-orange-600 to-button hover:bg-[#8B6508] text-white px-8 py-6 rounded-full text-lg font-content">
             Connect with Us
           </Button>
         </div>
@@ -47,7 +50,8 @@ export default function Home() {
       {/* Industry Expertise */}
       <div className="bg-secondary pb-12 pt-8 shadow-[0px_0px_0px_rgba(0,0,0,0.3)] rounded-md">
         {/* Web version of the heading */}
-        <h2 className="font-heading font-bold z-10 relative lg:block hidden mx-24 text-4xl md:text-5xl text-button text-center mb-36 lg:mb-36">
+        <h2 className="bg-gradient-to-r from-orange-600 via-button to-button
+               text-transparent bg-clip-text font-heading font-bold z-10 relative lg:block hidden mx-24 text-4xl md:text-5xl text-center mb-36 lg:mb-36">
           Unlock Your Potential with Dazzle
         </h2>
 
@@ -67,7 +71,7 @@ export default function Home() {
           </div>
 
           {/* Mobile version of the heading */}
-          <h2 className="text-3xl md:text-3xl font-heading text-button mb-40 z-10 relative lg:hidden text-center">
+          <h2 className="text-3xl md:text-3xl font-heading font-bold text-button mb-40 z-10 relative lg:hidden text-center">
             Unlock Your Potential with Dazzle
           </h2>
 
