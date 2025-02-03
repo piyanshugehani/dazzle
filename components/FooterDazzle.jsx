@@ -34,7 +34,7 @@ const FooterDazzle = () => {
         {/* Branding */}
         <div className="flex flex-col items-center gap-1 text-center">
           <Globe className="w-8 h-8" />
-          <div className="font-semibold text-xl font-logo">DAZZLE</div>
+          <div className="text-2xl font-logo font-bold">DAZZLE</div>
           <div className="text-sm opacity-70 font-subheading">A Market Research Company</div>
         </div>
       </div>

@@ -25,8 +25,9 @@ export default function CaseStudies() {
   ]
 
   return (
-    <div className="p-6 bg-[#FDF6EC]">
-      <h2 className="text-[#8B4513] text-3xl md:text-4xl font-heading mb-8 text-center">Case Studies</h2>
+    <div className="p-6 bg-secondary">
+      <h2 className="bg-gradient-to-r from-orange-600 via-button to-button
+               text-transparent bg-clip-text text-3xl md:text-4xl font-heading mt-16 mb-12 text-center italic font-bold">Case Studies</h2>
       <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto font-subheading">
         {cases.map((caseStudy, index) => (
           <Card
@@ -39,7 +40,7 @@ export default function CaseStudies() {
               backgroundRepeat: "no-repeat",
             }}
           >
-            <div className="absolute inset-0 bg-gradient-to-t from-[#f5e6d3] via-[#f5e6d3]/80 to-transparent opacity-90" />
+            <div className="absolute inset-0 bg-gradient-to-t from-secondary via-[#f5e6d3]/80 to-transparent opacity-90" />
             <CardContent className="h-full flex flex-col justify-end p-4 relative">
               <div className="text-center space-y-2">
                 <h3 className="font-medium text-[#8B4513] text-sm lg:text-base">{caseStudy.company}</h3>

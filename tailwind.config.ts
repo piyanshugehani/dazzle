@@ -26,10 +26,10 @@ const config: Config = {
           foreground: "hsl(var(--primary-foreground))"
         },
         button: {
-          DEFAULT: "#FF8225"
+          DEFAULT: "#ce5c04"
         },
         secondary: {
-          DEFAULT: "#EAEAEA",
+          DEFAULT: "#E8D7C3",
           foreground: "hsl(var(--secondary-foreground))"
         },
         muted: {
@@ -66,10 +66,10 @@ const config: Config = {
         }
       },
       fontFamily: {
-        logo: ["'Fancy Monospace Text'", "monospace"], // Replace with actual monospace font
+        logo: ["'Fancy Monospace Text'", "monospace"], 
         heading: ["'DM Serif Display'", "serif"],
         subheading: ["'Poppins'", "sans-serif"],
-        content: ["'Merriweather'", "serif"]
+        content: ["'Merriweather'"]
       },
       borderRadius: {
         lg: "var(--radius)",
