@@ -29,7 +29,7 @@ const config: Config = {
           DEFAULT: "#ce5c04"
         },
         secondary: {
-          DEFAULT: "#E6E1E0",
+          DEFAULT: "#E8D7C3",
           foreground: "hsl(var(--secondary-foreground))"
         },
         muted: {
