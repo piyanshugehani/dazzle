@@ -26,7 +26,7 @@ const config: Config = {
           foreground: "hsl(var(--primary-foreground))"
         },
         button: {
-          DEFAULT: "#873C03"
+          DEFAULT: "#ce5c04"
         },
         secondary: {
           DEFAULT: "#EAEAEA",
