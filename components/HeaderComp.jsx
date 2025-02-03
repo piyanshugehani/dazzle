@@ -6,7 +6,7 @@ const HeaderComp = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 flex justify-between items-center p-4 md:p-4 lg:px-16 bg-[#FDF6EC]">
+    <header className="fixed top-0 left-0 right-0 z-50 flex justify-between items-center p-4 md:p-4 lg:px-16 bg-secondary">
       {/* Logo */}
       <div className="flex items-center gap-2">
         <Globe className="w-8 h-8" />
