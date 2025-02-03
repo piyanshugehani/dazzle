@@ -80,20 +80,20 @@ const ReviewCard = ({
 
 export function MarqueeDemo() {
   return (
-    <div className="py-4 relative flex md:h-[500px] w-full flex-col items-center justify-center overflow-hidden bg-[#ffefda] rounded-lg shadow-md md:shadow-[0px_0px_10px_rgba(0,0,0,0.15)]">
-      <h2 className="text-2xl md:text-4xl font-heading text-[#B8860B] mb-6 text-center">Already Chosen By</h2>
-      <Marquee pauseOnHover className="[--duration:50s] font-content">
+    <div className="py-2 relative flex md:h-[500px] w-full flex-col items-center justify-center overflow-hidden bg-secondary rounded-lg md:shadow-[0px_0px_10px_rgba(0,0,0,0.15)]">
+      <h2 className="text-3xl md:text-4xl font-heading italic text-button mb-4 font-bold">Already Chosen By</h2>
+      <Marquee pauseOnHover className="[--duration:30s] font-content">
         {firstRow.map((review) => (
           <ReviewCard key={review.username} {...review} />
         ))}
       </Marquee>
-      <Marquee reverse pauseOnHover className="[--duration:20s] font-content">
+      <Marquee reverse pauseOnHover className="[--duration:30s] font-content">
         {secondRow.map((review) => (
           <ReviewCard key={review.username} {...review} />
         ))}
       </Marquee>
-      <div className="hidden sm:block pointer-events-none absolute inset-y-0 left-0 w-1/4 bg-gradient-to-r from-[#f5ede4] dark:from-[#E6D0B3]"></div>
-      <div className="hidden sm:block pointer-events-none absolute inset-y-0 right-0 w-1/4 bg-gradient-to-l from-[#fdf3e9] dark:from-[#E6D0B3]"></div>
+      <div className="hidden sm:block pointer-events-none absolute inset-y-0 left-0 w-1/4 bg-gradient-to-r from-[#f1f3f9] dark:from-[#E6D0B3]"></div>
+      <div className="hidden sm:block pointer-events-none absolute inset-y-0 right-0 w-1/4 bg-gradient-to-l from-[#f1f3f9] dark:from-[#E6D0B3]"></div>
     </div>
   );
 }

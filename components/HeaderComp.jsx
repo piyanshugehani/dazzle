@@ -20,10 +20,10 @@ const HeaderComp = () => {
 
       {/* Desktop Menu */}
       <nav className="hidden lg:flex items-center gap-8 font-subheading text-md">
-        <a href="#" className="hover:text-[#B8860B]">Services</a>
-        <a href="#" className="hover:text-[#B8860B]">About</a>
-        <a href="#" className="hover:text-[#B8860B]">Contact</a>
-        <button className="bg-[#B8860B] hover:bg-[#8B6508] px-4 py-2 rounded-md text-white">
+        <a href="#" className="hover:text-button">Services</a>
+        <a href="#" className="hover:text-button">About</a>
+        <a href="#" className="hover:text-button">Contact</a>
+        <button className="bg-button hover:bg-[#8B6508] px-4 py-2 rounded-md text-white">
           Get Started
         </button>
       </nav>
@@ -47,9 +47,9 @@ const HeaderComp = () => {
             <button className="self-end p-2" onClick={() => setIsOpen(false)}>
               <X className="w-6 h-6" />
             </button>
-            <a href="#" className="hover:text-[#B8860B] text-xl font-subheading">Services</a>
-            <a href="#" className="hover:text-[#B8860B] text-xl font-subheading">About</a>
-            <a href="#" className="hover:text-[#B8860B] text-xl font-subheading">Contact</a>
+            <a href="#" className="hover:text-button text-xl font-subheading">Services</a>
+            <a href="#" className="hover:text-button text-xl font-subheading">About</a>
+            <a href="#" className="hover:text-button text-xl font-subheading">Contact</a>
           </motion.div>
         </>
       )}

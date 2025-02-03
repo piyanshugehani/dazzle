@@ -10,7 +10,7 @@ export function IndustryCard({ title, items }: IndustryCardProps) {
       <div className="absolute inset-0 bg-gradient-to-b from-gray-100/50 to-gray-200/50 border border-black/45 text-center" />
 
       {/* Header with gradient */}
-      <div className="absolute top-0 left-0 right-0 h-16 bg-gradient-to-br from-gray-200 to-[#B68D40]">
+      <div className="absolute top-0 left-0 right-0 h-16 bg-gradient-to-br from-secondary to-button">
         <h3 className="text-[#632F00] text-xl font-semibold p-4 text-center">{title}</h3>
       </div>
 
