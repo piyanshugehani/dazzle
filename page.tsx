@@ -13,8 +13,8 @@ export default function Home() {
       {/* Header */}
       <header className="flex justify-between items-center p-4 md:p-6 lg:px-16">
         <div className="flex items-center gap-2">
-          <Globe className="w-6 h-6" />
-          <span className="font-semibold">DAZZLE</span>
+          <Globe className="w-8 h-8" />
+          <span className="font-semibold font-logo text-3xl">DAZZLE</span>
         </div>
         <button className="p-2 lg:hidden">
           <Menu className="w-6 h-6" />
