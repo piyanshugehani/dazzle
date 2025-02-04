@@ -25,9 +25,9 @@ export default function CaseStudies() {
   ]
 
   return (
-    <div className="p-6 bg-secondary">
+    <div className="p-8 bg-secondary">
       <h2 className="bg-gradient-to-r from-orange-600 via-button to-button
-               text-transparent bg-clip-text text-3xl md:text-4xl font-heading mt-16 mb-12 text-center italic font-bold">Case Studies</h2>
+               text-transparent bg-clip-text text-3xl md:text-5xl font-heading mt-2 mb-12 text-center font-bold">Explore Our Case Studies</h2>
       <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto font-subheading">
         {cases.map((caseStudy, index) => (
           <Card

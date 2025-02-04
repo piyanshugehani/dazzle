@@ -34,7 +34,13 @@ const FooterDazzle = () => {
         {/* Branding */}
         <div className="flex flex-col items-center gap-1 text-center">
           <Globe className="w-8 h-8" />
-          <div className="text-2xl font-logo font-bold">DAZZLE</div>
+          <Image
+            src={'./logo2.png'} // Path to your logo
+            alt="Dazzle Logo"
+            width={100} // Adjust width as needed
+            height={30} // Adjust height as needed
+            className="w-auto h-8"
+          />
           <div className="text-sm opacity-70 font-subheading">A Market Research Company</div>
         </div>
       </div>

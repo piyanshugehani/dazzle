@@ -1,0 +1,7 @@
+.transparent-logo {
+    background: url('/logo.png') no-repeat center center;
+    background-size: contain;
+    height: 30px;
+    width: 100px;
+  }
+  

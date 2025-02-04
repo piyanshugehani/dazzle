@@ -51,15 +51,15 @@ export default function FieldProtocols() {
   }
 
   return (
-    <section className="w-full bg-gradient-to-b from-secondary to-gray-300 py-16 md:py-24">
+    <section className="w-full bg-gradient-to-b from-secondary via-secondary to-secondary pb-16 md:pb-24">
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto space-y-8">
           <div className="space-y-4 text-center">
-            <h2 className="text-3xl md:text-3xl lg:text-4xl bg-gradient-to-r from-orange-600 via-button to-button
+            <h2 className="text-3xl md:text-3xl lg:text-5xl bg-gradient-to-r from-orange-500 via-button to-button
                text-transparent bg-clip-text font-heading font-bold tracking-tight">
               Field Quality Protocols
             </h2>
-            <p className="text-lg md:text-xl text-text/80 max-w-2xl mx-auto font-subheading">
+            <p className="text-lg md:text-xl text-text/80 max-w-2xl mx-auto font-content">
               Rigorously implemented and executed in all stages of field operations
             </p>
           </div>
@@ -72,7 +72,7 @@ export default function FieldProtocols() {
                   className="w-full group focus:outline-none rounded-xl"
                 >
                   <div className="relative w-full p-4 rounded-xl bg-secondary border border-accent/20 shadow-md hover:shadow-lg transition-all duration-200 flex items-center justify-between">
-                    <span className="text-lg font-medium text-text font-heading">
+                    <span className="text-lg text-text font-content">
                       {protocol.title}
                     </span>
                     <ChevronDown

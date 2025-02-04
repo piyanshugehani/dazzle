@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Globe, Menu, X } from "lucide-react";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 const HeaderComp = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -8,10 +9,17 @@ const HeaderComp = () => {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 flex justify-between items-center p-4 md:p-4 lg:px-16 bg-secondary">
       {/* Logo */}
-      <div className="flex items-center gap-2">
+      <div className="flex items-center gap-2 bg-transparent">
         <Globe className="w-8 h-8" />
-        <span className="font-semibold font-logo text-2xl">DAZZLE</span>
+        <Image
+          src={'./logo.png'}
+          alt="Dazzle Logo"
+          width={100}
+          height={30}
+          className="w-auto h-8"
+        />
       </div>
+
 
       {/* Mobile Menu Button */}
       <button className="p-2 lg:hidden" onClick={() => setIsOpen(!isOpen)}>
@@ -23,7 +31,7 @@ const HeaderComp = () => {
         <a href="#" className="hover:text-button">Services</a>
         <a href="#" className="hover:text-button">About</a>
         <a href="#" className="hover:text-button">Contact</a>
-        <button className="bg-gradient-to-br from-orange-600 to-button hover:bg-[#8B6508] px-4 py-2 rounded-md text-white">
+        <button className="bg-gradient-to-br from-orange-600 via-button to-button hover:bg-[#8B6508] px-4 py-2 rounded-md text-white">
           Get Started
         </button>
       </nav>
