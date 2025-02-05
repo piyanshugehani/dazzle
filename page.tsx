@@ -103,7 +103,7 @@ export default function Home() {
           viewport={{ once: false, amount: 0.5 }} // Trigger when 50% of the element is visible (centered)
           className="h-full shadow-[0px_0px_0px_rgba(0,0,0,0.3)]"
         >
-          <h2 className="text-button pt-20 pb-28 font-heading font-bold z-10 relative lg:block italic hidden mx-24 text-4xl md:text-5xl text-center">
+          <h2 className="bg-gradient-to-r from-orange-500 via-button to-button text-transparent bg-clip-text pt-20 pb-28 font-heading font-bold z-10 relative lg:block italic hidden mx-24 text-4xl md:text-5xl text-center">
             Unlock Your Potential with Dazzle
           </h2>
           <section className="md:px-20 lg:px-20 px-4 relative lg:flex lg:justify-center lg:items-center">
@@ -120,7 +120,7 @@ export default function Home() {
             </div>
 
             {/* Mobile version of the heading */}
-            <h2 className="text-3xl md:text-3xl font-heading font-bold text-button mb-40 z-10 relative lg:hidden text-center">
+            <h2 className="text-3xl md:text-3xl font-heading font-bold bg-gradient-to-r from-orange-600 via-button to-button text-transparent bg-clip-text mb-40 z-10 relative lg:hidden text-center">
               Unlock Your Potential with Dazzle
             </h2>
 
