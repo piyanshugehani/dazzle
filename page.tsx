@@ -56,19 +56,19 @@ export default function Home() {
         className="px-4 md:px-16 lg:px-24 py-12 md:py-24 lg:min-h-[80vh] lg:flex lg:items-center lg:gap-12"
       >
         <div className="lg:w-1/2 space-y-6">
-          <BoxReveal boxColor={"#B43F3F"} duration={0.2}>
+          <BoxReveal boxColor={"#6A0E1D"} duration={0.2}>
             <h1 className="text-6xl md:text-5xl lg:text-8xl font-heading font-bold mt-16 bg-gradient-to-r from-orange-600 via-button to-button text-transparent bg-clip-text">
               DAZZLE<span className="text-button"></span>
             </h1>
           </BoxReveal>
 
-          <BoxReveal boxColor={"#B43F3F"} duration={0.4}>
+          <BoxReveal boxColor={"#6A0E1D"} duration={0.4}>
             <h2 className="text-xl md:text-xl lg:text-2xl font-subheading">
               Transforming Research into Actionable Intelligence
             </h2>
           </BoxReveal>
 
-          <BoxReveal boxColor={"#B43F3F"} duration={0.4}>
+          <BoxReveal boxColor={"#6A0E1D"} duration={0.4}>
             <p className="text-gray-600 md:text-lg font-content">
               India’s leading hub for data-driven insights, revolutionizing analytics with precision, innovation, and expertise.
             </p>
