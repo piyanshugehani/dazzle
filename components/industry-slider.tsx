@@ -61,7 +61,7 @@ export function IndustrySlider() {
           <CarouselContent>
             {industryData.map((industry, index) => (
               <CarouselItem key={index} className="max-w-[85%] shrink-0 snap-center">
-                <div className="p-2">
+                <div className="p-0 pb-2">
                   <IndustryCard {...industry} />
                 </div>
               </CarouselItem>
