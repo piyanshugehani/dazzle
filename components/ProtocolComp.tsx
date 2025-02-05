@@ -71,7 +71,7 @@ export default function FieldProtocols() {
                   onClick={() => toggleSection(protocol.title)}
                   className="w-full group focus:outline-none rounded-xl"
                 >
-                  <div className="relative w-full p-4 rounded-xl bg-secondary border border-accent/20 shadow-md hover:shadow-lg transition-all duration-200 flex items-center justify-between">
+                  <div className="relative w-full p-4 rounded-xl bg-secondary border border-button/25 shadow-md hover:shadow-lg transition-all duration-200 flex items-center justify-between">
                     <span className="text-lg text-text font-content">
                       {protocol.title}
                     </span>
@@ -92,7 +92,7 @@ export default function FieldProtocols() {
                   transition={{ duration: 0.3, ease: "easeInOut" }}
                   className="overflow-hidden"
                 >
-                  <div className="mt-2 p-4 rounded-lg bg-secondary border shadow-inner">
+                  <div className="mt-2 p-4 rounded-lg bg-secondary border border-button/25 shadow-inner">
                     <ul className="list-disc list-inside space-y-2">
                       {protocol.items.map((item, index) => (
                         <li key={index} className="text-base text-text/80 font-content">

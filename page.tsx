@@ -53,7 +53,7 @@ export default function Home() {
         whileInView="visible"
         variants={fadeIn}
         viewport={{ once: false, amount: 0.5 }} // Triggers when the element is 50% visible (centered)
-        className="mt-12 px-4 md:px-16 lg:px-24 py-12 md:py-24 lg:min-h-[80vh] lg:flex lg:items-center lg:gap-12"
+        className="px-4 md:px-16 lg:px-24 py-12 md:py-24 lg:min-h-[80vh] lg:flex lg:items-center lg:gap-12"
       >
         <div className="lg:w-1/2 space-y-6">
           <BoxReveal boxColor={"#B43F3F"} duration={0.2}>

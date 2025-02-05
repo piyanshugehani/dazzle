@@ -1,9 +1,10 @@
 import type { Metadata } from 'next'
 import './globals.css'
+import HeaderComp from '@/components/HeaderComp'
 
 export const metadata: Metadata = {
-  title: 'v0 App',
-  description: 'Created with v0',
+  title: 'DAZZLE',
+  description: 'Created with ❤️ by DAZZLE',
 }
 
 export default function RootLayout({
@@ -13,7 +14,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body className="pt-16 md:pt-20"> {/* Adjust based on header height */}
+        <HeaderComp />
+        {children}
+      </body>
     </html>
   )
 }
