@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import './globals.css'
 import HeaderComp from '@/components/HeaderComp'
+import FooterDazzle from '@/components/FooterDazzle'
 
 export const metadata: Metadata = {
   title: 'DAZZLE',
@@ -14,9 +15,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="pt-16 md:pt-20"> {/* Adjust based on header height */}
+      <body className="pt-12 md:pt-16"> {/* Adjust based on header height */}
         <HeaderComp />
         {children}
+        <FooterDazzle/>
       </body>
     </html>
   )

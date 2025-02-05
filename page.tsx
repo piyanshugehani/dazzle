@@ -163,12 +163,7 @@ export default function Home() {
         >
           <FieldProtocols />
         </motion.div>
-      </div>
-
-      {/* Footer */}
-     
-        <FooterDazzle />
-      
+      </div>      
     </motion.div>
   );
 }

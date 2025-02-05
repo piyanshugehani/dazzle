@@ -30,7 +30,8 @@ const config: Config = {
         },
         secondary: {
           DEFAULT: "#F8EDED",
-          foreground: "#F3D2C3"
+          foreground: "#F3D2C3",
+          light: "#FDF7F7",
         },
         muted: {
           DEFAULT: "hsl(var(--muted))",

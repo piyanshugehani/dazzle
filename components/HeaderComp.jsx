@@ -10,7 +10,7 @@ const HeaderComp = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 flex justify-between items-center p-3 md:p-4 lg:px-16 bg-secondary shadow-sm border-b-1 border-button/50">
+    <header className="fixed top-0 left-0 right-0 z-50 flex justify-between items-center p-2 md:p-2 lg:px-16 bg-secondary shadow-sm border-b-1 border-button/50">
       {/* Logo - Desktop */}
       <Link href="/" className="hidden md:flex items-center gap-2 bg-secondary/80 p-2 rounded-lg">
         <Globe className="w-8 h-8" />
