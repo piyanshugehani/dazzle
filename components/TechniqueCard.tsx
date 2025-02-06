@@ -16,7 +16,7 @@ export function TechniqueCard({ title, description, features = [], image }: Tech
   {/* Desktop Card */}
   <div className="hidden md:flex bg-secondary-light rounded-xl shadow-lg p-8 md:p-12 flex-col md:flex-row gap-8 items-center">
     <div className="flex-1 space-y-6">
-      <h3 className="text-xl font-subheading text-button">{title}</h3>
+      <h3 className="text-2xl font-subheading font-semibold text-button">{title}</h3>
       <p className="text-lg font-subheading text-button/80">{description}</p>
       <ul className="space-y-4">
         {features?.map((feature, index) => (
@@ -30,26 +30,33 @@ export function TechniqueCard({ title, description, features = [], image }: Tech
       </ul>
     </div>
     <div className="flex-1 relative">
-      <Image src={image || "/placeholder.svg"} alt={title} width={500} height={200} className="object-cover" />
+    <Image
+  src={image || "/placeholder.svg"}
+  alt={title}
+  width={600}
+  height={500}
+  className="w-full h-[400px] object-cover"
+/>
+
     </div>
   </div>
 
   {/* Mobile Card */}
-  <div className="flex md:hidden bg-secondary-light rounded-xl shadow-lg p-6 flex-col gap-4 items-center text-center max-w-[60%]">
-    <h3 className="text-lg font-subheading text-button">{title}</h3>
-    <p className="text-lg font-content text-button/80">{description}</p>
-    <ul className="space-y-2">
-      {features?.map((feature, index) => (
-        <li key={index} className="flex items-center gap-2 justify-center">
-          <span className="rounded-full bg-[#FFF5F5] p-2">
-            <Check className="w-4 h-4 text-[#E86A33]" />
-          </span>
-          <span className="text-button text-sm">{feature}</span>
-        </li>
-      ))}
-    </ul>
-    <Image src={image || "/placeholder.svg"} alt={title} width={300} height={150} className="object-cover w-full max-h-32 rounded-lg" />
-  </div>
+  <div className="flex md:hidden bg-secondary-light rounded-xl shadow-lg p-6 flex-col gap-2 items-center text-center max-w-[68%] min-h-[300px] h-full">
+  <h3 className="text-xl font-subheading font-semibold text-button">{title}</h3>
+  <p className="text-lg font-content text-button/80">{description}</p>
+  
+  {/* Feature List with Bullet Points */}
+  <ul className="space-y-2 flex-1 flex flex-col justify-center list-disc p-5 text-left w-full text-button text-sm">
+    {features?.map((feature, index) => (
+      <li key={index}>{feature}</li>
+    ))}
+  </ul>
+
+  {/* Image remains fixed at the bottom */}
+  <Image src={image || "/placeholder.svg"} alt={title} width={300} height={150} className="object-cover w-full max-h-32 rounded-lg" />
+</div>
+
 </>
 
   );

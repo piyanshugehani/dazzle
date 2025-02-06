@@ -55,31 +55,69 @@ export default function Home() {
         viewport={{ once: false, amount: 0.5 }} // Triggers when the element is 50% visible (centered)
         className="px-4 md:px-16 lg:px-24 py-12 md:py-24 lg:min-h-[80vh] lg:flex lg:items-center lg:gap-12"
       >
-        <div className="lg:w-1/2 space-y-6">
-          <BoxReveal boxColor={"#6A0E1D"} duration={0.2}>
-            <h1 className="text-6xl md:text-5xl lg:text-8xl font-heading font-bold mt-16 bg-gradient-to-r from-orange-600 via-button to-button text-transparent bg-clip-text">
-              DAZZLE<span className="text-button"></span>
-            </h1>
-          </BoxReveal>
+        <div className="lg:w-1/2">
+  {/* For Large Screens - BoxReveal Effects */}
+  <div className="hidden lg:block space-y-6">
+    <BoxReveal boxColor={"#6A0E1D"} duration={0.2}>
+      <h1 className="text-6xl md:text-7xl lg:text-9xl font-heading font-bold mt-16 
+                     bg-gradient-to-r from-orange-600 via-button to-orange-600 
+                     text-transparent bg-clip-text 
+                     bg-[length:200%_200%] animate-glimmer">
+        DAZZLE
+      </h1>
+    </BoxReveal>
 
-          <BoxReveal boxColor={"#6A0E1D"} duration={0.4}>
-            <h2 className="text-xl md:text-xl lg:text-2xl font-subheading">
-              Transforming Research into Actionable Intelligence
-            </h2>
-          </BoxReveal>
+    <BoxReveal boxColor={"#6A0E1D"} duration={0.4}>
+      <h2 className="text-xl md:text-xl lg:text-2xl font-subheading">
+        Transforming Research into Actionable Intelligence
+      </h2>
+    </BoxReveal>
 
-          <BoxReveal boxColor={"#6A0E1D"} duration={0.4}>
-            <p className="text-gray-600 md:text-lg font-content">
-              India’s leading hub for data-driven insights, revolutionizing analytics with precision, innovation, and expertise.
-            </p>
-          </BoxReveal>
+    <BoxReveal boxColor={"#6A0E1D"} duration={0.4}>
+      <p className="text-gray-600 md:text-lg font-content">
+        India’s leading hub for data-driven insights, revolutionizing analytics with precision, innovation, and expertise.
+      </p>
+    </BoxReveal>
 
-          <BoxReveal boxColor={"#B43F3F"} duration={0.5}>
-            <Button className="relative overflow-hidden bg-gradient-to-br from-orange-600 via-button to-button hover:from-button hover:to-button transition-all duration-300 text-white px-8 py-6 rounded-full text-lg font-content before:content-[''] before:absolute before:top-0 before:left-[-75%] before:w-1/3 before:h-full before:bg-white/20 before:skew-x-[-25deg] before:transition-all before:duration-500 hover:before:left-[125%]">
-              Connect with Us
-            </Button>
-          </BoxReveal>
-        </div>
+    <BoxReveal boxColor={"#B43F3F"} duration={0.5}>
+      <Button className="relative overflow-hidden bg-gradient-to-br from-orange-600 via-button to-button 
+                         hover:from-button hover:to-button transition-all duration-300 
+                         text-white px-8 py-6 rounded-full text-lg font-content 
+                         before:content-[''] before:absolute before:top-0 before:left-[-75%] 
+                         before:w-1/3 before:h-full before:bg-white/20 before:skew-x-[-25deg] 
+                         before:transition-all before:duration-500 hover:before:left-[125%]">
+        Connect with Us
+      </Button>
+    </BoxReveal>
+  </div>
+
+  {/* For Mobile - Simple Display without Animations */}
+  <div className="block lg:hidden text-center space-y-4">
+    <h1 className="text-5xl md:text-6xl font-heading font-bold mt-12 
+                   bg-gradient-to-r from-orange-600 via-button to-orange-600 
+                   text-transparent bg-clip-text 
+                   bg-[length:200%_200%] animate-glimmer">
+      DAZZLE
+    </h1>
+
+    <h2 className="text-lg md:text-xl font-subheading">
+      Transforming Research into Actionable Intelligence
+    </h2>
+
+    <p className="text-gray-600 md:text-lg font-content">
+      India’s leading hub for data-driven insights, revolutionizing analytics with precision, innovation, and expertise.
+    </p>
+
+    <Button className="relative overflow-hidden bg-gradient-to-br from-orange-600 via-button to-button 
+                       hover:from-button hover:to-button transition-all duration-300 
+                       text-white px-6 py-4 rounded-full text-lg font-content 
+                       before:content-[''] before:absolute before:top-0 before:left-[-75%] 
+                       before:w-1/3 before:h-full before:bg-white/20 before:skew-x-[-25deg] 
+                       before:transition-all before:duration-500 hover:before:left-[125%]">
+      Connect with Us
+    </Button>
+  </div>
+</div>
 
         <div className="mt-8 lg:mt-0 lg:w-1/2">
           <div className="rounded-3xl overflow-hidden">
@@ -163,7 +201,7 @@ export default function Home() {
         >
           <FieldProtocols />
         </motion.div>
-      </div>      
+      </div>
     </motion.div>
   );
 }

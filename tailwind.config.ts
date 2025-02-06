@@ -67,7 +67,7 @@ const config: Config = {
         }
       },
       fontFamily: {
-        logo: ["'Fancy Monospace Text'", "monospace"], 
+        logo: ["'Fancy Monospace Text'", "monospace"],
         heading: ["'DM Serif Display'", "serif"],
         subheading: ["'Poppins'", "sans-serif"],
         content: ["'Merriweather'"]
@@ -77,7 +77,15 @@ const config: Config = {
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)"
       },
+
       keyframes: {
+        "glimmer": {
+          "0%": { backgroundPosition: "0% 50%" },
+          "25%": { backgroundPosition: "50% 60%" },
+          "50%": { backgroundPosition: "100% 50%" },
+          "75%": { backgroundPosition: "50% 40%" },
+          "100%": { backgroundPosition: "0% 50%" },
+        },
         "accordion-down": {
           from: { height: "0" },
           to: { height: "var(--radix-accordion-content-height)" }
@@ -96,6 +104,7 @@ const config: Config = {
         }
       },
       animation: {
+        "glimmer": "glimmer 3s ease-in-out infinite",
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
         marquee: "marquee var(--duration) infinite linear",
