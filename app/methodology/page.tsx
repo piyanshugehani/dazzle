@@ -88,7 +88,7 @@ export default function MethodologiesPage() {
             Our Methodologies & Experiences
           </motion.h1>
           <motion.p
-            className="text-lg md:text-2xl font-subheading"
+            className="text-lg md:text-2xl font-subheading text-white"
             {...fadeIn}
             transition={{ delay: 0.2 }}
           >

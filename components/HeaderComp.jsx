@@ -11,6 +11,7 @@ const HeaderComp = () => {
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 flex justify-between items-center p-2 md:p-2 lg:px-16 bg-secondary shadow-sm border-b-1 border-button/50">
+      
       {/* Logo - Desktop */}
       <Link href="/" className="hidden md:flex items-center gap-2 bg-secondary/80 p-2 rounded-lg">
         <Globe className="w-8 h-8" />
@@ -36,15 +37,24 @@ const HeaderComp = () => {
       </Link>
 
       {/* Mobile Menu Button */}
-      <button className="p-2 lg:hidden " onClick={() => setIsOpen(!isOpen)}>
+      <button className="p-2 lg:hidden" onClick={() => setIsOpen(!isOpen)}>
         {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
       </button>
 
       {/* Desktop Menu */}
-      <nav className="hidden lg:flex items-center gap-10 font-subheading text-md ">
-        <Link href="/about" className="hover:text-button">About Us</Link>
-        <Link href="/services" className="hover:text-button">Services</Link>
-        <Link href="/methodology" className="hover:text-button">Methodology</Link>
+      <nav className="hidden lg:flex items-center gap-10 font-subheading text-md">
+        <Link href="/about" className="relative group hover:text-button">
+          About Us
+          <span className="absolute left-0 bottom-0 h-0.5 w-full bg-button transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" />
+        </Link>
+        <Link href="/services" className="relative group hover:text-button">
+          Services
+          <span className="absolute left-0 bottom-0 h-0.5 w-full bg-button transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" />
+        </Link>
+        <Link href="/methodology" className="relative group hover:text-button">
+          Methodology
+          <span className="absolute left-0 bottom-0 h-0.5 w-full bg-button transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" />
+        </Link>
         <button className="bg-gradient-to-br from-orange-600 via-button to-button hover:bg-[#8B6508] px-4 py-2 rounded-md text-white">
           Get Started
         </button>
