@@ -72,7 +72,7 @@ export default function ResearchExperience() {
                   className={`
                     group/card relative bg-gray-100 
                     transition-all duration-300 overflow-hidden min-w-[300px] max-w-[300px]
-                    snap-center flex-shrink-0 hover:scale-105
+                    snap-center flex-shrink-0 md:hover:scale-105 lg:md:hover:scale-105
                     ${isHovered ? 'translate-y-0 rotate-0' : 
                       isCenter ? 'translate-y-0 rotate-0' :
                       isLeft ? '-translate-y-6 -rotate-6' : '-translate-y-6 rotate-6'}
@@ -95,22 +95,29 @@ export default function ResearchExperience() {
           </div>
 
           <Button
-            variant="ghost"
-            size="icon"
-            className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 bg-black/60 hover:bg-black/80 text-white rounded-full opacity-0 group-hover:opacity-100 transition-opacity"
-            onClick={() => scroll("left")}
-          >
-            <ChevronLeft className="h-6 w-6" />
-          </Button>
+  variant="ghost"
+  size="icon"
+  className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 
+             bg-black/60 hover:bg-black/80 text-white rounded-full 
+             opacity-0 group-hover:opacity-100 transition-opacity 
+             hidden sm:flex"
+  onClick={() => scroll("left")}
+>
+  <ChevronLeft className="h-6 w-6" />
+</Button>
 
-          <Button
-            variant="ghost"
-            size="icon" 
-            className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 bg-black/60 hover:bg-black/80 text-white rounded-full opacity-0 group-hover:opacity-100 transition-opacity"
-            onClick={() => scroll("right")}
-          >
-            <ChevronRight className="h-6 w-6" />
-          </Button>
+<Button
+  variant="ghost"
+  size="icon"
+  className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 
+             bg-black/60 hover:bg-black/80 text-white rounded-full 
+             opacity-0 group-hover:opacity-100 transition-opacity 
+             hidden sm:flex"
+  onClick={() => scroll("right")}
+>
+  <ChevronRight className="h-6 w-6" />
+</Button>
+
         </div>
       </div>
     </section>
