@@ -1,4 +1,6 @@
 import React from "react";
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "./ui/accordion";
+import { Minus, Plus } from "lucide-react";
 
 const faqs = [
   {
@@ -25,21 +27,38 @@ const faqs = [
 
 const FAQSection = () => {
   return (
-    <div className="w-full max-w-7xl mx-auto px-6 py-12">
+    <div className="w-full max-w-6xl mx-auto px-6 py-12">
       <h1
                 className="text-3xl md:text-4xl font-heading pb-6 text-center font-bold italic bg-gradient-to-r from-orange-600 via-button to-button text-transparent bg-clip-text"
             >
                 Frequently asked questions
             </h1>
+            <Accordion type="single" collapsible className="w-full">
+                {faqs.map((faq, index) => (
+                    <AccordionItem key={index} value={`item-${index}`} className="border-b border-gray-200">
+                        {/* Custom Trigger with Plus/Minus */}
+                        <AccordionTrigger className="flex justify-between items-center w-full py-4 px-2 text-left">
+                            <span className="font-medium text-gray-900">{faq.question}</span>
+                           
+                        </AccordionTrigger>
 
-      <div className="grid md:grid-cols-4 gap-6">
+                        <AccordionContent className="py-4 px-2 text-gray-600">
+                            {faq.answer}
+                        </AccordionContent>
+                    </AccordionItem>
+                ))}
+            </Accordion>
+
+
+
+            {/* <div className="grid md:grid-cols-4 gap-6">
         {faqs.map((faq, index) => (
           <div key={index} className="bg-secondary-light p-6 rounded-lg shadow-md border border-gray-200">
             <h2 className="text-md font-subheading text-button mb-4">{faq.question}</h2>
             <p className="text-gray-600 font-content">{faq.answer}</p>
           </div>
         ))}
-      </div>
+      </div> */}
 
       <div className="text-center mt-12">
         <h2 className="text-xl font-heading mb-1 text-button font-semibold">Still have questions?</h2>

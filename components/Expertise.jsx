@@ -1,4 +1,3 @@
-import { Globe } from 'lucide-react';
 import Image from 'next/image';
 import React from 'react';
 
@@ -28,16 +27,21 @@ const ExpertiseOverview = () => {
 
  
     const Card = ({ title, items = [] }) => (
-      <div className="bg-secondary-light rounded-md shadow-lg overflow-hidden border border-gray-200 hover:shadow-xl transition-shadow duration-300">
-        <div className="bg-gradient-to-br from-orange-700 via-button to-button px-6 py-2">
-          <h2 className="text-lg font-subheading text-secondary-light">{title}</h2>
+        <div className="relative group rounded-xl border border-gray-200 shadow-lg bg-secondary-light/80 overflow-hidden transition-all duration-300 hover:shadow-2xl hover:scale-[1.02] cursor-pointer">
+        {/* Card Header with Floating Effect */}
+        <div className="relative px-6 py-2 bg-secondary-light shadow-inner border-b border-gray-100">
+          <h2 className="text-xl font-heading text-gray-900">{title}</h2>
+          <div className="absolute -bottom-[1px] left-0 w-full h-[3px] bg-gradient-to-r from-orange-600 via-button to-button scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></div>
         </div>
-        <div className="p-6">
+      
+        {/* Card Body */}
+        <div className="px-4 py-3">
           <ul className="space-y-2">
             {items.map((item, index) => (
-              <li key={index} className="flex items-start gap-2">
-                <span className="text-button mt-1">
-                  <svg className="w-2 h-4" fill="currentColor" viewBox="0 0 20 20">
+              <li key={index} className="flex items-start gap-3">
+                {/* Custom Icon with Glow Effect */}
+                <span className="text-button mt-1 group-hover:animate-pulse">
+                  <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
                     <path d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" />
                   </svg>
                 </span>
@@ -47,6 +51,7 @@ const ExpertiseOverview = () => {
           </ul>
         </div>
       </div>
+      
     );
 
 
