@@ -15,7 +15,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="pt-12 md:pt-16"> {/* Adjust based on header height */}
+      <body className="pt-16 md:pt-20"> {/* Adjust based on header height */}
         <HeaderComp />
         {children}
         <FooterDazzle/>
