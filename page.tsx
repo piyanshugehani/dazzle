@@ -174,7 +174,7 @@ export default function Home() {
           className="h-full shadow-[0px_0px_0px_rgba(0,0,0,0.3)]"
         >
           <h2 className="bg-gradient-to-r from-orange-600 via-button to-button text-transparent bg-clip-text pt-20 pb-28 font-heading font-bold z-10 relative lg:block italic hidden mx-24 text-4xl md:text-5xl text-center">
-            Unlock Your Potential with Dazzle
+          Elevate Your Success with Our Expertise 
           </h2>
           <section className="md:px-20 lg:px-20 px-4 relative lg:flex lg:justify-center lg:items-center">
             <div className="absolute inset-0 z-0 flex justify-center items-center">
@@ -185,13 +185,13 @@ export default function Home() {
                 width={400}
                 height={200}
                 objectFit="contain"
-                className="lg:mb-36"
+                className="lg:mb-36 mt-10"
               />
             </div>
 
             {/* Mobile version of the heading */}
-            <h2 className="text-3xl md:text-3xl font-heading font-bold bg-gradient-to-r from-orange-600 via-button to-button text-transparent bg-clip-text mb-40 z-10 relative lg:hidden text-center">
-              Unlock Your Potential with Dazzle
+            <h2 className="text-3xl md:text-3xl font-heading font-bold italic bg-gradient-to-r from-orange-600 via-button to-button text-transparent bg-clip-text mb-40 z-10 relative lg:hidden text-center">
+            Elevate Your Success with Our Expertise
             </h2>
 
             <div className="lg:flex lg:justify-center lg:items-center lg:mt-16 z-10 relative" ref={unlockRef}>

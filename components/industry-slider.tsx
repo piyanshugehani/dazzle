@@ -3,45 +3,43 @@ import { IndustryCard } from "./IndustryCard"
 
 const industryData = [
   {
-    title: "Industry Expertise",
+    title: "Client focus & Partnering",
     items: [
-      "> Financial Services & Banking",
-      "> Consumer Goods & Retail",
-      "> Telecom, IT, Electronics",
-      "> Automotives, Transportation & Logistics",
-      "> Pharmaceuticals & Life Sciences",
+      "We emphasize a clear focus on our clients and their needs.",
+      "Our planning, approach, and results align with client goals.",
+      "Each engagement is treated as a mutually beneficial partnership.",
+      "Dazzle's synergies enable comprehensive research solutions.",
     ],
   },
   {
-    title: "Competencies",
+    title: "Our people",
     items: [
-      "> Primary data collection",
-      "> Data Analytics",
-      "> Intellectual Property & Legal",
-      "> Process Services",
-      "> Knowledge Technology",
+      "Dazzle’s employees are among the best trained in the industry.",
+      "Teams consist of MBAs [IIM], engineers, and statisticians.",
+      "Depending on needs, we include experts, scientists, and economists.",
     ],
   },
   {
-    title: "Coverage & Market",
+    title: "High quality standards",
     items: [
-      "> Operation centers in Mumbai, Delhi, Bangalore and Chennai",
-      "> Multi-lingual capabilities (50+)",
-      "> Field offices in over 21 locations",
-      "> 24x5 Project Execution",
+      "We uphold impeccable quality standards in every research stage.",
+      "Our approach ensures complete confidence in the final results.",
+      "Efficiency enables us to complete projects much quicker.",
+      "This allows clients to make faster and smarter decisions.",
     ],
   },
   {
-    title: "Industry Solutions",
+    title: "Actionable insights",
     items: [
-      "> Custom Research Solutions",
-      "> Market Intelligence",
-      "> Business Analytics",
-      "> Digital Transformation",
-      "> Strategic Consulting",
+      "We recognize the value of our clients' investments in expertise.",
+      "Our goal is to ensure these investments drive real success.",
+      "Every engagement is designed to deliver actionable insights.",
+      "We go beyond reports—our impact truly makes a difference.",
     ],
   },
-]
+];
+
+
 
 export function IndustrySlider() {
   return (
