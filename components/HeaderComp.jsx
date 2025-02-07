@@ -10,7 +10,7 @@ const HeaderComp = ({ bgColor = "#F8EDED" }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 pt-2 px-2 lg:pt-4 lg:pb-2 lg:px-16 md:px-16 transition-colors duration-500" style={{ backgroundColor: bgColor }}>
+    <header className="fixed top-0 left-0 right-0 z-50 pt-2 pb-1 px-2 lg:pt-4 lg:pb-2 lg:px-16 md:px-16 transition-colors duration-500" style={{ backgroundColor: bgColor }}>
       <div className="hidden lg:flex justify-between items-center bg-secondary shadow-[0_0_5px_rgba(0,0,0,0.2)] border border-button/20 rounded-full px-8 py-2">
         {/* Logo - Desktop */}
         <Link href="/" className="hidden md:flex items-center gap-2 bg-secondary/80 p-2 rounded-lg">
