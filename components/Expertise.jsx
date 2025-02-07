@@ -1,3 +1,5 @@
+import { Globe } from 'lucide-react';
+import Image from 'next/image';
 import React from 'react';
 
 const ExpertiseOverview = () => {
@@ -24,72 +26,50 @@ const ExpertiseOverview = () => {
     'Around the clock project execution (24h x 5)'
   ];
 
-  return (
-    <div className="max-w-6xl mx-auto p-6 space-y-6">
-      <h1 className="text-3xl font-bold text-white bg-blue-800 p-4 rounded-t-lg">
-        Areas of Expertise
-      </h1>
-      
-      <p className="text-lg mb-8">
-        Dazzle provides customized research services to leading-edge companies
-      </p>
-
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 relative">
-        {/* Left Column - Competencies */}
-        <div className="bg-gray-100 p-4 rounded border-2 border-blue-800">
-          <h2 className="text-xl font-bold bg-blue-800 text-white p-2 -mt-4 -mx-4 mb-4">
-            Competencies
-          </h2>
-          <ul className="list-none space-y-2">
-            {competencies.map((item, index) => (
-              <li key={index} className="flex items-start space-x-2">
-                <span className="text-blue-800 font-bold">■</span>
-                <span>{item}</span>
-              </li>
-            ))}
-          </ul>
+ 
+    const Card = ({ title, items = [] }) => (
+      <div className="bg-secondary-light rounded-md shadow-lg overflow-hidden border border-gray-200 hover:shadow-xl transition-shadow duration-300">
+        <div className="bg-gradient-to-br from-orange-700 via-button to-button px-6 py-2">
+          <h2 className="text-lg font-subheading text-secondary-light">{title}</h2>
         </div>
-
-        {/* Center Column - Globe Image */}
-        <div className="flex items-center justify-center">
-          <div className="relative w-64 h-64">
-            <img
-              src="/api/placeholder/256/256"
-              alt="Global Network"
-              className="w-full h-full object-contain"
-            />
-          </div>
-        </div>
-
-        {/* Right Column - Industry Expertise */}
-        <div className="bg-gray-100 p-4 rounded border-2 border-blue-800">
-          <h2 className="text-xl font-bold bg-blue-800 text-white p-2 -mt-4 -mx-4 mb-4">
-            Industry Expertise
-          </h2>
-          <ul className="list-none space-y-2">
-            {industryExpertise.map((item, index) => (
-              <li key={index} className="flex items-start space-x-2">
-                <span className="text-blue-800 font-bold">■</span>
-                <span>{item}</span>
+        <div className="p-6">
+          <ul className="space-y-2">
+            {items.map((item, index) => (
+              <li key={index} className="flex items-start gap-2">
+                <span className="text-button mt-1">
+                  <svg className="w-2 h-4" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" />
+                  </svg>
+                </span>
+                <span className="text-gray-700 font-content leading-relaxed">{item}</span>
               </li>
             ))}
           </ul>
         </div>
       </div>
+    );
 
-      {/* Bottom Section - Coverage & Market Knowledge */}
-      <div className="bg-gray-100 p-4 rounded border-2 border-blue-800 mt-6">
-        <h2 className="text-xl font-bold bg-blue-800 text-white p-2 -mt-4 -mx-4 mb-4">
-          Coverage & Market Knowledge
-        </h2>
-        <ul className="list-none space-y-2">
-          {coverage.map((item, index) => (
-            <li key={index} className="flex items-start space-x-2">
-              <span className="text-blue-800 font-bold">■</span>
-              <span>{item}</span>
-            </li>
-          ))}
-        </ul>
+
+  return (
+    <div className="max-w-6xl mx-auto space-y-6">
+      <p className="text-xl mb-8 text-center font-subheading">
+        We provide customized research services to leading-edge companies
+      </p>
+
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        <Card title="Competencies" items={competencies} />
+        
+        <div className="flex items-center justify-center">
+          <div className="relative w-64 h-64 flex items-center justify-center bg-secondary-light rounded-full shadow-inner">
+            <Image src="/undraw.svg" alt="India Map" width={300} height={300} />
+          </div>
+        </div>
+        
+        <Card title="Industry Expertise" items={industryExpertise} />
+      </div>
+
+      <div className="mt-8">
+        <Card title="Coverage & Market Knowledge" items={coverage} />
       </div>
     </div>
   );

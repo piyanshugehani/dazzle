@@ -3,14 +3,6 @@
 import React, { useState, useEffect } from "react";
 
 const MultiCardComponent = () => {
-  const [isLoaded, setIsLoaded] = useState(false);
-
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setIsLoaded(true);
-    }, 200);
-    return () => clearTimeout(timer);
-  }, []);
   const cardsData = [
     { 
       title: "Quantitative & Qualitative", 
@@ -46,7 +38,6 @@ const MultiCardComponent = () => {
   
 
   return (
-    isLoaded && (
       <div className="flex flex-wrap justify-center max-w-screen-lg mx-auto">
         {cardsData.map((card, index) => (
           <div
@@ -59,7 +50,7 @@ const MultiCardComponent = () => {
           </div>
         ))}
       </div>
-    )
+    
     
   );
 };
