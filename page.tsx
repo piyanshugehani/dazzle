@@ -1,6 +1,6 @@
 "use client";
-import { useRef } from "react";
-import { motion, useScroll, useTransform } from "framer-motion";
+import { useEffect, useRef, useState } from "react";
+import { motion, useMotionValueEvent, useScroll, useTransform } from "framer-motion";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { IndustrySlider } from "./components/industry-slider";
@@ -13,19 +13,51 @@ import { BoxReveal } from "./components/DecryptedText";
 
 export default function Home() {
   const unlockRef = useRef(null);
+  const fieldProtocolRef = useRef(null);
 
   // Track scroll progress
   const { scrollYProgress } = useScroll({
     target: unlockRef,
-    offset: ["start center", "start center"], // Triggers when element enters the viewport
+    offset: ["start center", "start center"],
   });
 
   // Interpolating background color transition
-  const bgColor = useTransform(
-    scrollYProgress,
-    [0, 1], // Scroll range
-    ["#F8EDED", "#F3D2C3"] // Tailwind's secondary → secondary-foreground
-  );
+  const bgMotionValue = useTransform(scrollYProgress, [0, 1], ["#F8EDED", "#F3D2C3"]);
+
+  // State to store extracted color string
+  const [bgColor, setBgColor] = useState("#F8EDED");
+
+
+  // Extract color from motion value and update state
+  useEffect(() => {
+    const unsubscribe = bgMotionValue.on("change", (latest) => {
+      setBgColor(latest);
+    });
+
+    return () => unsubscribe();
+  }, [bgMotionValue]);
+
+  // Detect if the FieldProtocols section is reached
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setBgColor("#F8EDED"); // Reset to first color
+        }
+      },
+      { threshold: 0.1 } // Trigger when 50% is visible
+    );
+
+    if (fieldProtocolRef.current) {
+      observer.observe(fieldProtocolRef.current);
+    }
+
+    return () => {
+      if (fieldProtocolRef.current) {
+        observer.unobserve(fieldProtocolRef.current);
+      }
+    };
+  }, []);
 
   // Animation variant for fade-in slide-up
   const fadeInSlideUp = {
@@ -45,7 +77,7 @@ export default function Home() {
       className="min-h-screen transition-colors duration-500"
     >
       {/* Header */}
-      <HeaderComp />
+      <HeaderComp bgColor = {bgColor} />
 
       {/* Hero Section */}
       <motion.div
@@ -191,7 +223,7 @@ export default function Home() {
         </motion.div>
       </div>
 
-      <div className="bg-secondary pt-20">
+      <div className="bg-secondary pt-20 " ref={fieldProtocolRef}>
         {/* Field Quality Protocols */}
         <motion.div
           initial="hidden"
