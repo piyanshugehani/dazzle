@@ -47,7 +47,7 @@ const MultiCardComponent = () => {
 
   return (
     isLoaded && (
-      <div className="flex flex-wrap justify-center mx-auto">
+      <div className="flex flex-wrap justify-center max-w-screen-lg mx-auto">
         {cardsData.map((card, index) => (
           <div
             key={index}
