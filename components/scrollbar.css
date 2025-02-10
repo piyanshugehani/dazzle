@@ -1,0 +1,15 @@
+/* Hide scrollbar for Webkit (Chrome, Safari) */
+::-webkit-scrollbar {
+    display: none;
+  }
+  
+  /* Hide scrollbar for Firefox */
+  * {
+    scrollbar-width: none;
+  }
+  
+  /* Optional: Prevent accidental vertical scrolling */
+  .overflow-x-auto {
+    overflow-y: hidden;
+  }
+  
