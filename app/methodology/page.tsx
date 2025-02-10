@@ -76,13 +76,13 @@ export default function MethodologiesPage() {
         />
 
         {/* Dark Overlay with Blur Only on Mobile */}
-        <div className="absolute inset-0 bg-white/25 backdrop-blur-sm sm:backdrop-blur-none"></div>
+        <div className="absolute inset-0 bg-white/25 backdrop-blur-sm "></div>
 
 
         {/* Content */}
-        <div className="relative z-10 text-center max-w-4xl mx-auto px-4">
+        <div className="relative z-10 text-center max-w-4xl mx-auto px-4 ">
           <motion.h1
-            className="text-4xl md:text-6xl font-heading font-bold italic bg-gradient-to-r from-button via-button to-button text-transparent bg-clip-text mb-4"
+           className="text-4xl md:text-6xl font-heading font-bold italic bg-gradient-to-r from-button via-button to-button text-transparent bg-clip-text mb-4 "
             {...fadeIn}
           >
             Our Methodologies & Experiences
