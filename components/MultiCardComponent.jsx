@@ -41,7 +41,7 @@ const MultiCardComponent = () => {
     {cardsData.map((card, index) => (
       <div
         key={index}
-        className="relative z-0 cursor-grab hover:z-1 hover:scale-105 transition-all duration-300"
+        className="relative z-0 cursor-grab hover:z-10 hover:scale-105 transition-all duration-300"
       >
         <div
           className="w-60 h-72 bg-secondary-light backdrop-blur-md rounded-2xl p-8 shadow-lg transform hover:scale-105 transition-all duration-300"
