@@ -223,7 +223,7 @@ export default function Home() {
         </motion.div>
       </div>
 
-      <div className="bg-secondary pt-20 " ref={fieldProtocolRef}>
+      <div className="pt-20 " ref={fieldProtocolRef}>
         {/* Field Quality Protocols */}
         <motion.div
           initial="hidden"
