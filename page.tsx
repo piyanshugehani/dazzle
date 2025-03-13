@@ -22,7 +22,7 @@ export default function Home() {
   });
 
   // Interpolating background color transition
-  const bgMotionValue = useTransform(scrollYProgress, [0, 1], ["#FFFFFF", "#000000"]);
+  const bgMotionValue = useTransform(scrollYProgress, [0, 1], ["#FFFFFF", "#F5E6D0"]);
 
   // State to store extracted color string
   const [bgColor, setBgColor] = useState("#FFFFFF");
@@ -172,6 +172,7 @@ export default function Home() {
           variants={fadeInSlideUp}
           viewport={{ once: false, amount: 0.5 }} // Trigger when 50% of the element is visible (centered)
           className="h-full shadow-[0px_0px_0px_rgba(0,0,0,0.3)]"
+          
         >
           <h2 className="bg-gradient-to-r from-orange-600 via-button to-button text-transparent bg-clip-text pt-20 pb-28 font-heading font-bold z-10 relative lg:block italic hidden mx-24 text-4xl md:text-5xl text-center">
           Elevate Your Success with Our Expertise 
@@ -207,7 +208,7 @@ export default function Home() {
           variants={fadeInSlideUp}
           viewport={{ once: false, amount: 0.5 }} // Trigger when 50% of the element is visible (centered)
           className="md:px-24 lg:px-24 px-2 pt-10 md:pt-8"
-          ref={fieldProtocolRef}
+          
         >
           <MarqueeDemo />
         </motion.div>
@@ -231,6 +232,7 @@ export default function Home() {
           whileInView="visible"
           variants={fadeInSlideUp}
           viewport={{ once: false, amount: 0.5 }} // Trigger when 50% of the element is visible (centered)
+          ref={fieldProtocolRef}
         >
           <FieldProtocols />
         </motion.div>
