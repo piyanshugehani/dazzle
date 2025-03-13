@@ -22,7 +22,7 @@ export default function Home() {
   });
 
   // Interpolating background color transition
-  const bgMotionValue = useTransform(scrollYProgress, [0, 1], ["#FFFFFF", "#F5E6D0"]);
+  const bgMotionValue = useTransform(scrollYProgress, [0, 1], ["#FFFFFF", "#FFFFFF"]);
 
   // State to store extracted color string
   const [bgColor, setBgColor] = useState("#FFFFFF");
