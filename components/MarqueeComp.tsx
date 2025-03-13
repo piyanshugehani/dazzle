@@ -1,5 +1,6 @@
 import { cn } from "@/lib/utils";
 import { Marquee } from "./ui/marquee";
+import { LogoCarouselDemo } from "./Support";
 
 const reviews = [
   {
@@ -81,20 +82,9 @@ const ReviewCard = ({
 export function MarqueeDemo() {
   return (
     <div className="py-6 relative flex md:h-[400px] w-full flex-col items-center justify-center overflow-hidden rounded-lg">
-      <h2 className="text-3xl md:text-5xl font-heading md:mb-4 lg:mb-4 mb-4 italic font-bold bg-gradient-to-r from-orange-600 via-button to-button
-               text-transparent bg-clip-text">Already Chosen By</h2>
-      <Marquee className="[--duration:30s] font-content">
-        {firstRow.map((review) => (
-          <ReviewCard key={review.username} {...review} />
-        ))}
-      </Marquee>
-      <Marquee reverse className="[--duration:30s] font-content">
-        {secondRow.map((review) => (
-          <ReviewCard key={review.username} {...review} />
-        ))}
-      </Marquee>
-      <div className="hidden sm:block pointer-events-none absolute inset-y-0 left-0 w-1/3 "></div>
-      <div className="hidden sm:block pointer-events-none absolute inset-y-0 right-0 w-1/3"></div>
+
+<LogoCarouselDemo/>
+      
     </div>
   );
 }

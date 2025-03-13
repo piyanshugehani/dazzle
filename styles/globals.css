@@ -6,6 +6,13 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+canvas {
+  mix-blend-mode: normal !important;
+  filter: none !important;
+  background-color: #fff; /* or your desired background */
+}
+
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;

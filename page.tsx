@@ -10,10 +10,17 @@ import FieldProtocols from "./components/ProtocolComp";
 import FooterDazzle from "./components/FooterDazzle";
 import HeaderComp from "./components/HeaderComp";
 import { BoxReveal } from "./components/DecryptedText";
+import { HeroVideoDialog } from "./components/hero";
+import { renderCanvas } from "@/components/ui/canvas"
+import { LogoCarouselDemo } from "./components/Support";
 
 export default function Home() {
   const unlockRef = useRef(null);
   const fieldProtocolRef = useRef(null);
+
+  useEffect(() => {
+    renderCanvas();
+  }, []);
 
   // Track scroll progress
   const { scrollYProgress } = useScroll({
@@ -22,7 +29,7 @@ export default function Home() {
   });
 
   // Interpolating background color transition
-  const bgMotionValue = useTransform(scrollYProgress, [0, 1], ["#FFFFFF", "#FFFFFF"]);
+  const bgMotionValue = useTransform(scrollYProgress, [0, 1], ["#FFFFFF", "#F8E6E9"]);
 
   // State to store extracted color string
   const [bgColor, setBgColor] = useState("#FFFFFF");
@@ -153,16 +160,32 @@ export default function Home() {
 
         <div className="mt-8 lg:mt-0 lg:w-1/2">
           <div className="rounded-3xl overflow-hidden">
-            <Image
+            {/* <Image
               src={'./dummy.png'}
               alt="Modern office workspace"
               width={800}
               height={600}
               className="w-full h-[300px] md:h-[400px] lg:h-[500px] object-cover"
-            />
+            /> */}
+            <HeroVideoDialog
+        className="block dark:hidden"
+        animationStyle="from-center"
+        videoSrc="https://www.youtube.com/embed/qh3NGpYRG3I?si=4rb-zSdDkVK9qxxb"
+        thumbnailSrc={'./dummy.png'}
+        thumbnailAlt="Hero Video"
+      />
+      <HeroVideoDialog
+        className="hidden dark:block"
+        animationStyle="from-center"
+        videoSrc="https://www.youtube.com/embed/qh3NGpYRG3I?si=4rb-zSdDkVK9qxxb"
+        thumbnailSrc={'./dummy.png'}
+        thumbnailAlt="Hero Video"
+      />
           </div>
         </div>
       </motion.div>
+      
+      {/* <Hero/> */}
 
       <div>
         {/* Industry Expertise */}
@@ -201,6 +224,11 @@ export default function Home() {
           </section>
         </motion.div>
 
+        <canvas
+        className="pointer-events-none absolute inset-0 mx-auto"
+        id="canvas"
+      ></canvas>
+
         {/* Already Chosen By */}
         <motion.div
           initial="hidden"
@@ -211,6 +239,7 @@ export default function Home() {
           
         >
           <MarqueeDemo />
+          
         </motion.div>
 
         {/* Case Studies */}
@@ -219,7 +248,7 @@ export default function Home() {
           whileInView="visible"
           variants={fadeInSlideUp}
           viewport={{ once: false, amount: 0.5 }} // Trigger when 50% of the element is visible (centered)
-          className="px-4 md:px-16 lg:px-24 md:pb-10 lg:pb-12 md:pt-0"
+          className="px-4 md:px-16 lg:px-24 md:pb-10 lg:pb-12 md:pt-10 lg:pt-12"
         >
           <CaseStudies />
         </motion.div>
