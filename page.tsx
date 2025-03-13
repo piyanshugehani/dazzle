@@ -180,7 +180,7 @@ export default function Home() {
           <section className="md:px-20 lg:px-20 px-4 relative lg:flex lg:justify-center lg:items-center">
             <div className="absolute inset-0 z-0 flex justify-center items-center">
               <Image
-                src="./globe-orange.svg"
+                src="./globe-red.svg"
                 alt="Background Image"
                 layout="intrinsic"
                 width={400}
