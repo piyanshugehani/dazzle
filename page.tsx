@@ -22,10 +22,10 @@ export default function Home() {
   });
 
   // Interpolating background color transition
-  const bgMotionValue = useTransform(scrollYProgress, [0, 1], ["#F8EDED", "#F3D2C3"]);
+  const bgMotionValue = useTransform(scrollYProgress, [0, 1], ["#FFFFFF", "#000000"]);
 
   // State to store extracted color string
-  const [bgColor, setBgColor] = useState("#F8EDED");
+  const [bgColor, setBgColor] = useState("#FFFFFF");
 
 
   // Extract color from motion value and update state
@@ -42,7 +42,7 @@ export default function Home() {
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          setBgColor("#F8EDED"); // Reset to first color
+          setBgColor("#FFFFFF"); // Reset to first color
         }
       },
       { threshold: 0.1 } // Trigger when 50% is visible
@@ -179,7 +179,7 @@ export default function Home() {
           <section className="md:px-20 lg:px-20 px-4 relative lg:flex lg:justify-center lg:items-center">
             <div className="absolute inset-0 z-0 flex justify-center items-center">
               <Image
-                src="./globe.svg"
+                src="./globe-orange.svg"
                 alt="Background Image"
                 layout="intrinsic"
                 width={400}
@@ -207,6 +207,7 @@ export default function Home() {
           variants={fadeInSlideUp}
           viewport={{ once: false, amount: 0.5 }} // Trigger when 50% of the element is visible (centered)
           className="md:px-24 lg:px-24 px-2 pt-10 md:pt-8"
+          ref={fieldProtocolRef}
         >
           <MarqueeDemo />
         </motion.div>
@@ -223,7 +224,7 @@ export default function Home() {
         </motion.div>
       </div>
 
-      <div className="pt-20 " ref={fieldProtocolRef}>
+      <div className="pt-20 " >
         {/* Field Quality Protocols */}
         <motion.div
           initial="hidden"

@@ -7,7 +7,7 @@ export function IndustryCard({ title, items }: IndustryCardProps) {
   return (
     <div className="relative w-full max-w-[335px] h-[300px] rounded-3xl p-2 shadow-lg overflow-hidden">
       {/* Background with gradient */}
-      <div className="absolute inset-0 bg-gradient-to-b from-gray-100/50 to-gray-200/50  text-center" />
+      <div className="absolute inset-0 bg-gradient-to-b from-gray-100/80 to-gray-200/60  text-center" />
 
       {/* Header with gradient */}
       <div className="absolute top-0 left-0 right-0 h-12 bg-gradient-to-br from-orange-700 via-button to-button">

@@ -6,7 +6,7 @@ import { BookOpen, ChevronRight, Globe, HomeIcon, Menu, Settings, User, X } from
 import { motion } from "framer-motion";
 import Image from "next/image";
 
-const HeaderComp = ({ bgColor = "#F8EDED" }) => {
+const HeaderComp = ({ bgColor = "#FFFFFF" }) => {     //#F8EDED
   const [isOpen, setIsOpen] = useState(false);
 
   return (
@@ -16,7 +16,7 @@ const HeaderComp = ({ bgColor = "#F8EDED" }) => {
         <Link href="/" className="hidden md:flex items-center gap-2 bg-secondary/80 p-2 rounded-lg">
           <Globe className="w-8 h-8" />
           <Image
-            src={'/logo.png'}
+            src={'/logo-white.png'}
             alt="Dazzle Logo"
             width={70}
             height={20}
