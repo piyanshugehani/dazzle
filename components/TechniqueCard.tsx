@@ -81,7 +81,7 @@ export function Carousel({ techniques }: { techniques: TechniqueCardProps[] }) {
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
       >
-        <h2 className="text-4xl italic font-heading font-semibold bg-gradient-to-r from-orange-600 via-button to-button text-transparent bg-clip-text mb-6 text-center">Data Collection Techniques</h2>
+        <h2 className="text-5xl italic font-heading font-semibold bg-gradient-to-r from-orange-600 via-button to-button text-transparent bg-clip-text mb-6 text-center">Data Collection Techniques</h2>
 
         {/* Carousel Container */}
         <div className="relative">

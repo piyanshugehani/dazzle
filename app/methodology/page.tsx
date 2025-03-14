@@ -106,7 +106,7 @@ export default function MethodologiesPage() {
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-4xl font-heading font-semibold italic bg-gradient-to-r from-orange-600 via-button to-button text-transparent bg-clip-text mb-6 text-center">Research Methodologies</h2>
+          <h2 className="text-5xl font-heading font-semibold italic bg-gradient-to-r from-orange-600 via-button to-button text-transparent bg-clip-text mb-6 text-center">Research Methodologies</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
             {[
               { icon: BarChart2, title: "Quantitative & Qualitative Research" },
@@ -152,7 +152,7 @@ export default function MethodologiesPage() {
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-4xl font-heading italic font-semibold bg-gradient-to-r from-orange-600 via-button to-button text-transparent bg-clip-text mb-6 text-center">Experiences in Social Research</h2>
+          <h2 className="text-5xl font-heading italic font-semibold bg-gradient-to-r from-orange-600 via-button to-button text-transparent bg-clip-text mb-6 text-center">Experiences in Social Research</h2>
           <ResearchExperience />
         </motion.div>
       </section>

@@ -412,8 +412,8 @@ export function LogoCarouselDemo() {
     <div className="space-y-8 py-24">
       <div className="mx-auto flex w-full max-w-screen-2xl flex-col items-center space-y-8">
         <div className="text-center mb-6">
-        <h2 className="text-3xl md:text-5xl font-heading md:mb-4 lg:mb-4 mb-4 italic font-bold bg-gradient-to-r from-orange-600 via-button to-button
-               text-transparent bg-clip-text">Already Chosen By</h2>
+        <h2 className="text-3xl md:text-5xl font-heading md:mb-4 lg:mb-4 mb-4 italic font-bold ">Already <span className="bg-gradient-to-r from-orange-600 via-button to-button
+               text-transparent bg-clip-text">Chosen</span> By</h2>
             <p className="text-lg text-gray-600 mt-4">
                 Trusted by the world's best 
             </p>

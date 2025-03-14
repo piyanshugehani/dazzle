@@ -29,7 +29,7 @@ const FAQSection = () => {
   return (
     <div className="w-full max-w-6xl mx-auto px-6 py-12">
       <h1
-                className="text-3xl md:text-4xl font-heading pb-6 text-center font-bold italic bg-gradient-to-r from-orange-600 via-button to-button text-transparent bg-clip-text"
+                className="text-4xl md:text-5xl font-heading pb-6 text-center font-bold italic bg-gradient-to-r from-orange-600 via-button to-button text-transparent bg-clip-text"
             >
                 Frequently asked questions
             </h1>

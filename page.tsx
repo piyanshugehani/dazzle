@@ -197,8 +197,8 @@ export default function Home() {
           className="h-full shadow-[0px_0px_0px_rgba(0,0,0,0.3)]"
           
         >
-          <h2 className="bg-gradient-to-r from-orange-600 via-button to-button text-transparent bg-clip-text pt-20 pb-28 font-heading font-bold z-10 relative lg:block italic hidden mx-24 text-4xl md:text-5xl text-center">
-          Elevate Your Success with Our Expertise 
+          <h2 className=" pt-20 pb-28 font-heading font-bold z-10 relative lg:block italic hidden mx-24 text-4xl md:text-5xl text-center">
+          Elevate Your <span className="bg-gradient-to-r from-orange-600 via-button to-button text-transparent bg-clip-text">Success</span> with Our <span className="bg-gradient-to-r from-orange-600 via-button to-button text-transparent bg-clip-text">Expertise</span> 
           </h2>
           <section className="md:px-20 lg:px-20 px-4 relative lg:flex lg:justify-center lg:items-center">
             <div className="absolute inset-0 z-0 flex justify-center items-center">
