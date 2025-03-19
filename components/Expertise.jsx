@@ -57,7 +57,7 @@ const ExpertiseOverview = () => {
 
   return (
     <div className="max-w-6xl mx-auto space-y-6">
-      <p className="text-lg mb-8 text-center font-subheading">
+      <p className="text-md mb-8 text-center font-subheading">
         We provide customized research services to leading-edge companies
       </p>
 

@@ -59,7 +59,7 @@ const HeaderComp = ({ bgColor = "#FFFFFF" }) => {     //#F8EDED
         {/* Centered Logo */}
         <Link href="/">
           <Image
-            src={'/logo.png'}
+            src={'/logo-white.png'}
             alt="Dazzle Logo"
             width={80}
             height={25}

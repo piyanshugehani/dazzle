@@ -214,9 +214,10 @@ export default function Home() {
             </div>
 
             {/* Mobile version of the heading */}
-            <h2 className="text-3xl md:text-3xl font-heading font-bold italic bg-gradient-to-r from-orange-600 via-button to-button text-transparent bg-clip-text mb-40 z-10 relative lg:hidden text-center">
-            Elevate Your Success with Our Expertise
+            <h2 className="text-3xl md:text-3xl font-heading font-bold italic mb-40 z-10 relative lg:hidden text-center">
+            Elevate Your <span className="bg-gradient-to-r from-orange-600 via-button to-button text-transparent bg-clip-text">Success</span> with Our <span className="bg-gradient-to-r from-orange-600 via-button to-button text-transparent bg-clip-text">Expertise</span>
             </h2>
+    
 
             <div className="lg:flex lg:justify-center lg:items-center lg:mt-16 z-10 relative" ref={unlockRef}>
               <IndustrySlider />
@@ -228,6 +229,7 @@ export default function Home() {
         className="pointer-events-none absolute inset-0 mx-auto"
         id="canvas"
       ></canvas>
+
 
         {/* Already Chosen By */}
         <motion.div
@@ -253,6 +255,8 @@ export default function Home() {
           <CaseStudies />
         </motion.div>
       </div>
+      
+      
 
       <div className="pt-20 " >
         {/* Field Quality Protocols */}
@@ -266,6 +270,8 @@ export default function Home() {
           <FieldProtocols />
         </motion.div>
       </div>
+      
     </motion.div>
+    
   );
 }
