@@ -22,6 +22,6 @@
       "@/*": ["./*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "components/Benefits.jsx", "components/MultiCardComponent.rsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "components/Benefits.jsx", "components/MultiCardComponent.rsx", "components/Expertise.jsx"],
   "exclude": ["node_modules"]
 }

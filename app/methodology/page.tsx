@@ -1,6 +1,7 @@
 "use client"
 
 import ResearchExperience from "@/components/ExperienceCard"
+import Slide from "@/components/Slide"
 import { Carousel, TechniqueCard } from "@/components/TechniqueCard"
 import { motion } from "framer-motion"
 import {
@@ -65,49 +66,30 @@ export default function MethodologiesPage() {
   return (
     <div className="min-h-screen bg-secondary">
       {/* Hero Section */}
-      <section className="relative h-[70vh] flex items-center justify-center overflow-hidden">
+      <section className="relative flex items-center justify-center sm:mt-10">
         {/* Background Image */}
-        <Image
-          src="https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-          alt="Research background"
-          fill
-          className="object-cover brightness-75"
-          priority
-        />
+        
 
         {/* Dark Overlay with Blur Only on Mobile */}
         <div className="absolute inset-0 bg-white/25 backdrop-blur-sm "></div>
 
 
         {/* Content */}
-        <div className="relative z-10 text-center max-w-4xl mx-auto px-4 ">
+        <div className="relative z-10 text-center max-w-6xl mx-auto px-4 ">
           <motion.h1
-           className="text-4xl md:text-6xl font-heading font-bold italic bg-gradient-to-r from-button via-button to-button text-transparent bg-clip-text mb-4 "
+           className="text-4xl md:text-5xl font-subheading font-bold my-4 "
             {...fadeIn}
           >
-            Our Methodologies & Experiences
+            Research <span className="bg-gradient-to-r from-orange-700 via-button to-button text-transparent bg-clip-text">Methodologies</span> <span className="bg-gradient-to-r from-orange-700 via-button to-button text-transparent bg-clip-text"></span>
           </motion.h1>
           <motion.p
-            className="text-lg md:text-2xl font-subheading text-white"
+            className="text-lg md:text-2xl font-content text-gray-600"
             {...fadeIn}
             transition={{ delay: 0.2 }}
           >
             Delivering Data-Driven Insights with Precision & Expertise
           </motion.p>
-        </div>
-      </section>
-
-
-      {/* Research Methodologies */}
-      <section className="py-16 px-4 md:px-8">
-        <motion.div
-          className="max-w-6xl mx-auto"
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-        >
-          <h2 className="text-5xl font-heading font-semibold italic bg-gradient-to-r from-orange-600 via-button to-button text-transparent bg-clip-text mb-6 text-center">Research Methodologies</h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
+          {/* <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4 mt-10">
             {[
               { icon: BarChart2, title: "Quantitative & Qualitative Research" },
               { icon: FileSearch, title: "Desk Research & Data Analytics" },
@@ -116,7 +98,7 @@ export default function MethodologiesPage() {
             ].map((item, i) => (
               <motion.div
                 key={i}
-                className="bg-secondary-light p-2 rounded-xl shadow-lg text-md font-content text-center"
+                className="bg-secondary-light p-10 rounded-xl shadow-lg text-md font-content text-center"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: i * 0.1 }}
@@ -126,9 +108,30 @@ export default function MethodologiesPage() {
                 <h3 className="text-md font-content text-button">{item.title}</h3>
               </motion.div>
             ))}
-          </div>
-        </motion.div>
+          </div> */}
+          <div className="gap-4 mt-20"><Slide/></div>
+          
+        </div>
       </section>
+{/* 
+      const imageSources = [
+    "https://vertify.com/wp-content/uploads/2023/10/Rev-Growth-1024x576.png",
+    "https://media.licdn.com/dms/image/v2/D5612AQGk8BddkXBnpg/article-cover_image-shrink_720_1280/article-cover_image-shrink_720_1280/0/1722267121812?e=1747872000&v=beta&t=vfkLmBP7IBSBnv9tH6lnzASoBccfm6obwrVE2ZSdXrU",
+    "https://vivacf.net/wp-content/uploads/2023/07/How-to-Future-proof-Your-Business-Finances.jpg",
+    "https://johpartners.com/wp-content/uploads/2023/12/Human-Element-of-Transformation-joh-partners-1024x683.webp",
+  ]; */}
+      {/* Research Methodologies
+      <section className="px-4 md:px-8">
+        <motion.div
+          className="max-w-6xl mx-auto"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+        >
+          
+         
+        </motion.div>
+      </section> */}
 
       {/* Data Collection Techniques */}
       <section className="md:px-8">
@@ -152,7 +155,13 @@ export default function MethodologiesPage() {
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-5xl font-heading italic font-semibold bg-gradient-to-r from-orange-600 via-button to-button text-transparent bg-clip-text mb-6 text-center">Experiences in Social Research</h2>
+          <motion.h1
+           className="text-4xl md:text-5xl font-subheading font-bold my-4 text-center"
+            {...fadeIn}
+          >
+            Experiences in <span className="bg-gradient-to-r from-orange-700 via-button to-button text-transparent bg-clip-text"></span> <span className="bg-gradient-to-r from-orange-700 via-button to-button text-transparent bg-clip-text">Social Research</span>
+          </motion.h1>
+          
           <ResearchExperience />
         </motion.div>
       </section>

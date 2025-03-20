@@ -69,13 +69,13 @@ export default function AboutUs() {
             },
           }}
         >
-          <h2 className="text-3xl md:text-5xl font-heading mt-2 mb-12 text-center italic font-bold">
+          <h2 className="text-3xl md:text-5xl font-subheading mt-2 mb-12 text-center font-bold">
             Our{" "}
             <span className="bg-gradient-to-r from-orange-600 via-button to-button text-transparent bg-clip-text">
               Expertise
             </span>{" "}
             &{" "}
-            <span className="bg-gradient-to-r from-orange-600 via-button to-button text-transparent bg-clip-text">
+            <span className="bg-gradient-to-r from-button via-button to-button text-transparent bg-clip-text">
               Impact
             </span>
           </h2>
@@ -229,7 +229,7 @@ export default function AboutUs() {
             visible: { opacity: 1, y: 0, transition: { delay: 0.2, duration: 0.8 } },
           }}
         >
-          <h2 className="text-3xl md:text-5xl font-heading mt-2 mb-6 text-center italic font-bold">Partner with <span className="bg-gradient-to-r from-orange-600 via-button to-button
+          <h2 className="text-3xl md:text-5xl font-subheading mt-2 mb-6 text-center font-bold">Partner with <span className="bg-gradient-to-r from-orange-600 via-button to-button
                text-transparent bg-clip-text ">Dazzle </span>Consulting</h2>
           <p className="font-content text-xl text-gray-700 mb-10">
             Turn insights into impact. Let's shape the future—together.
