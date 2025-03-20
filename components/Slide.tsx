@@ -28,9 +28,13 @@ const Slide = () => {
 
   const [currentIndex, setCurrentIndex] = useState(0);
   const touchStartX = useRef<number>(0);
+  const touchMoveX = useRef<number>(0);
 
   const handleTouchStart = (e: React.TouchEvent) => {
     touchStartX.current = e.touches[0].clientX;
+  };
+  const handleTouchMove = (e: React.TouchEvent) => {
+    touchMoveX.current = e.touches[0].clientX;
   };
 
   const handleTouchEnd = (e: React.TouchEvent) => {
@@ -49,28 +53,35 @@ const Slide = () => {
 
   return (
     <div className="max-w-screen-2xl mx-auto">
-      {/* Desktop View (Rotated Cards) */}
       <div className="hidden md:flex flex-wrap justify-center gap-6">
-        {cardsData.map((card, index) => (
-          <div
-            key={index}
-            className="relative w-60 h-72 bg-secondary-light backdrop-blur-md rounded-2xl p-6 shadow-lg transform hover:scale-105 transition-all duration-300 hover:z-50"
-            style={{ transform: `rotate(${card.rotation}deg)` }}
-          >
-            <h3 className="text-xl font-semibold text-button font-subheading">
-              {card.title}
-            </h3>
-            <p className="mt-3 text-sm font-content">{card.description}</p>
-          </div>
-        ))}
-      </div>
+  {cardsData.map((card, index) => (
+    <div
+      key={index}
+      className="relative w-60 h-72 bg-secondary-light backdrop-blur-md rounded-2xl p-6 shadow-lg transition-transform duration-300 ease-in-out cursor-pointer hover:scale-110 hover:z-50"
+      style={{ transform: `rotate(${card.rotation}deg)`, transition: "transform 0.3s ease-in-out" }}
+      onMouseEnter={(e) => (e.currentTarget.style.transform = `rotate(${card.rotation}deg) scale(1.1)`)}
+      onMouseLeave={(e) => (e.currentTarget.style.transform = `rotate(${card.rotation}deg) scale(1)`)}>
+      <h3 className="text-xl font-semibold text-button font-subheading">
+        {card.title}
+      </h3>
+      <p className="mt-3 text-sm font-content">{card.description}</p>
+    </div>
+  ))}
+</div>
+
 
       {/* Mobile View (One Card, Swipe to Change) */}
-      <div className="md:hidden flex flex-col items-center">
+      <div className="md:hidden flex flex-col items-center overflow-hidden">
         <div
           onTouchStart={handleTouchStart}
+          onTouchMove={handleTouchMove}
           onTouchEnd={handleTouchEnd}
-          className="w-64 h-72 bg-secondary-light backdrop-blur-md rounded-2xl p-6 shadow-lg touch-none select-none"
+          className="relative w-64 h-72 bg-secondary-light backdrop-blur-md rounded-2xl p-6 shadow-lg select-none transition-transform duration-500"
+          style={{
+            transform: `perspective(1000px) rotateY(${
+              (currentIndex - 1) * 10
+            }deg) scale(${currentIndex === 1 ? 1.05 : 1})`,
+          }}
         >
           <h3 className="text-xl font-semibold text-button font-subheading">
             {cardsData[currentIndex].title}

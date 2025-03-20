@@ -66,18 +66,18 @@ export default function MethodologiesPage() {
   return (
     <div className="min-h-screen bg-secondary">
       {/* Hero Section */}
-      <section className="relative flex items-center justify-center sm:mt-10">
+      <section className="relative flex items-center justify-center sm:mt-20">
         {/* Background Image */}
         
 
-        {/* Dark Overlay with Blur Only on Mobile */}
-        <div className="absolute inset-0 bg-white/25 backdrop-blur-sm "></div>
+        {/* Dark Overlay with Blur Only on Mobile
+        <div className="absolute inset-0 bg-white/25 backdrop-blur-sm "></div> */}
 
 
         {/* Content */}
         <div className="relative z-10 text-center max-w-6xl mx-auto px-4 ">
           <motion.h1
-           className="text-4xl md:text-5xl font-subheading font-bold my-4 "
+           className="text-4xl md:text-5xl font-subheading font-bold mt-10"
             {...fadeIn}
           >
             Research <span className="bg-gradient-to-r from-orange-700 via-button to-button text-transparent bg-clip-text">Methodologies</span> <span className="bg-gradient-to-r from-orange-700 via-button to-button text-transparent bg-clip-text"></span>
@@ -109,7 +109,7 @@ export default function MethodologiesPage() {
               </motion.div>
             ))}
           </div> */}
-          <div className="gap-4 mt-20"><Slide/></div>
+          <div className="gap-4 mt-10"><Slide/></div>
           
         </div>
       </section>

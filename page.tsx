@@ -103,7 +103,7 @@ export default function Home() {
           {/* For Large Screens - BoxReveal Effects */}
           <div className="hidden lg:block space-y-6">
             
-              <h1 className="text-6xl md:text-7xl lg:text-9xl font-heading font-bold mt-16 
+              <h1 className="text-6xl md:text-9xl lg:text-9xl font-heading font-bold mt-16 
                              bg-gradient-to-r from-orange-600 via-button to-orange-600 
                              text-transparent bg-clip-text 
                              bg-[length:200%_200%] animate-glimmer text-center" style={{ zIndex: 1000 }}>
@@ -147,14 +147,14 @@ export default function Home() {
 
           {/* For Mobile - Simple Display without Animations */}
           <div className="block lg:hidden space-y-4 px-4">
-            <h1 className="text-5xl md:text-6xl font-heading font-bold mt-12 
+            <h1 className="text-7xl md:text-6xl font-heading font-extrabold mt-12 
                            bg-gradient-to-r from-orange-600 via-button to-orange-600 
                            text-transparent bg-clip-text 
                            bg-[length:200%_200%] animate-glimmer">
               DAZZLE
             </h1>
 
-            <h2 className="text-lg md:text-xl font-subheading">
+            <h2 className="text-lg md:text-xl font-subheading font-bold">
               Transforming Research into Actionable Intelligence
             </h2>
 
