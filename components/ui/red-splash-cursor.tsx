@@ -5,21 +5,21 @@ function ProfessionalFluidEffect({
   // Performance settings
   SIM_RESOLUTION = 64, // Reduced for better performance
   DYE_RESOLUTION = 512, // Reduced for better performance
-  DENSITY_DISSIPATION = 4.5, // Faster dissipation for cleaner look
+  DENSITY_DISSIPATION = 1.5, // Faster dissipation for cleaner look
   VELOCITY_DISSIPATION = 3, // Faster velocity dissipation
   PRESSURE = 0.1,
   PRESSURE_ITERATIONS = 12, // Reduced for performance
-  CURL = 2, // Less swirling
+  CURL = 4, // Less swirling
 
   // Visual settings
-  SPLAT_RADIUS = 0.15, // Smaller, more controlled splats
+  SPLAT_RADIUS = 0.1, // Smaller, more controlled splats
   SPLAT_FORCE = 2000, // Less forceful for subtlety
   SHADING = true,
   COLOR_UPDATE_SPEED = 2, // Slower color transitions
 
   // Color settings
   colorIntensity = 0.3, // Controls the intensity of the red color
-  colorVariation = 0.1, // Controls how much the red color varies
+  colorVariation = 0.5, // Controls how much the red color varies
 
   // Integration settings
   opacity = 0.7, // Controls the opacity of the effect
@@ -1052,9 +1052,10 @@ function ProfessionalFluidEffect({
     <div
       className="absolute inset-0 w-full"
       style={{ zIndex: 1}}
+
     >
         
-      <canvas ref={canvasRef} className="w-full" />
+      <canvas ref={canvasRef} className="w-full h-[100vh]" />
     </div>
   )
 }

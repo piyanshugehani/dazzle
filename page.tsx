@@ -16,7 +16,7 @@ import { ProfessionalFluidEffect } from "./components/ui/red-splash-cursor";
 import { HeroScrollWithVideo } from "./components/HeroScroll";
 
 export default function Home() {
-  const [colorIntensity, setColorIntensity] = useState(0.3);
+  const [colorIntensity, setColorIntensity] = useState(0.5);
   const [opacity, setOpacity] = useState(0.7);
   const [pointerEvents, setPointerEvents] = useState(true);
   const unlockRef = useRef(null);
@@ -97,6 +97,7 @@ export default function Home() {
         variants={fadeIn}
         viewport={{ once: false, amount: 0.5 }}
         className=" py-12 md:py-24 lg:min-h-[80vh] flex flex-col justify-center items-center "
+        
       >
         <div className="text-center justify-center items-center space-y-6">
           {/* For Large Screens - BoxReveal Effects */}
@@ -105,19 +106,19 @@ export default function Home() {
               <h1 className="text-6xl md:text-7xl lg:text-9xl font-heading font-bold mt-16 
                              bg-gradient-to-r from-orange-600 via-button to-orange-600 
                              text-transparent bg-clip-text 
-                             bg-[length:200%_200%] animate-glimmer text-center">
+                             bg-[length:200%_200%] animate-glimmer text-center" style={{ zIndex: 1000 }}>
                 DAZZLE
               </h1>
          
 
            
-              <h2 className="md:px-36 text-4xl md:text-5xl font-bold font-subheading text-center">
+              <h2 className="md:px-36 text-4xl md:text-5xl font-bold font-subheading text-center" style={{ zIndex: 1000 }}>
                 Transforming Research into Actionable Intelligence
               </h2>
           
 
            
-              <p className="text-gray-600 md:text-lg font-content">
+              <p className="text-gray-600 md:text-lg font-content" style={{ zIndex: 1000 }}>
                 India’s leading hub for data-driven insights, revolutionizing analytics with precision, innovation, and expertise.
               </p>
           
@@ -130,20 +131,22 @@ export default function Home() {
                                  text-white px-6 py-4 rounded-full text-lg font-content 
                                  before:content-[''] before:absolute before:top-0 before:left-[-75%] 
                                  before:w-1/3 before:h-full before:bg-white/20 before:skew-x-[-25deg] 
-                                 before:transition-all before:duration-500 hover:before:left-[125%] mr-2">
+                                 before:transition-all before:duration-500 hover:before:left-[125%] mr-2 cursor-pointer"
+                                 style={{ zIndex: 1000, cursor: "pointer" }}>
                 Contact Sales
               </Button>
           <Button variant="outline" className="relative overflow-hidden transition-all duration-300 
                                  px-6 py-4 rounded-full text-lg font-content 
                                  before:content-[''] before:absolute before:top-0 before:left-[-75%] 
                                  before:w-1/3 before:h-full before:bg-white/20 before:skew-x-[-25deg] 
-                                 before:transition-all before:duration-500 hover:before:left-[125%]">Learn More</Button>
+                                 before:transition-all before:duration-500 hover:before:left-[125%]"
+                                 style={{ zIndex: 1000, cursor: "pointer" }}>Learn More</Button>
         </div>
           
           </div>
 
           {/* For Mobile - Simple Display without Animations */}
-          <div className="block lg:hidden space-y-4">
+          <div className="block lg:hidden space-y-4 px-4">
             <h1 className="text-5xl md:text-6xl font-heading font-bold mt-12 
                            bg-gradient-to-r from-orange-600 via-button to-orange-600 
                            text-transparent bg-clip-text 
@@ -164,9 +167,17 @@ export default function Home() {
                                text-white px-6 py-4 rounded-full text-lg font-content 
                                before:content-[''] before:absolute before:top-0 before:left-[-75%] 
                                before:w-1/3 before:h-full before:bg-white/20 before:skew-x-[-25deg] 
-                               before:transition-all before:duration-500 hover:before:left-[125%]">
-              Connect with Us
+                               before:transition-all before:duration-500 hover:before:left-[125%] cursor-pointer mr-2"
+                               style={{ zIndex: 1000, cursor: "pointer" }}
+                               >
+              Contact Sales
             </Button>
+            <Button variant="outline" className="relative overflow-hidden transition-all duration-300 
+                                 px-6 py-4 rounded-full text-lg font-content 
+                                 before:content-[''] before:absolute before:top-0 before:left-[-75%] 
+                                 before:w-1/3 before:h-full before:bg-white/20 before:skew-x-[-25deg] 
+                                 before:transition-all before:duration-500 hover:before:left-[125%]"
+                                 style={{ zIndex: 1000, cursor: "pointer" }}>Learn More</Button>
           </div>
         </div>
         
