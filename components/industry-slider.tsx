@@ -15,7 +15,7 @@ const industryData = [
     title: "Our people",
     items: [
       "Dazzle’s employees are among the best trained in the industry.",
-      "Teams consist of MBAs [IIM], engineers, and statisticians.",
+      "Teams consist of industry professionals, engineers, and statisticians.",
       "Depending on needs, we include experts, scientists, and economists.",
     ],
   },

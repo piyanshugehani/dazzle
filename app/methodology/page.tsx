@@ -134,9 +134,9 @@ export default function MethodologiesPage() {
       </section> */}
 
       {/* Data Collection Techniques */}
-      <section className="md:px-8">
+      <section className="">
         <motion.div
-          className="max-w-6xl mx-auto"
+          className="max-w-full mx-auto"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}

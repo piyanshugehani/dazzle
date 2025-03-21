@@ -5,6 +5,8 @@ import React from 'react';
 
 const ExpertiseOverview = () => {
   const competencies = [
+    'Strategy & Market Consulting',
+    'Market Research',
     'Primary data collection',
     'Data Analytics',
     'Intellectual Property & Legal Process Services',
@@ -15,6 +17,7 @@ const ExpertiseOverview = () => {
     'Financial Services & Banking',
     'Consumer Goods & Retail',
     'Telecom, IT, Electronics',
+    'Media & Entertainment',
     'Automotives, Transportation & Logistics',
     'Pharmaceuticals & Life Sciences',
   ];
@@ -58,7 +61,7 @@ const ExpertiseOverview = () => {
   return (
     <div className="max-w-6xl mx-auto space-y-6">
       <p className="text-md mb-8 text-center font-subheading">
-        We provide customized research services to leading-edge companies
+        We provide industry sector-wise consultancy services to our clients. 
       </p>
 
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">

@@ -9,8 +9,9 @@ export function HeroScrollWithVideo() {
         titleComponent={
           <>
             <h1 className="text-4xl font-semibold text-black dark:text-white">
-              Unleash the power of <br />
-              <span className="text-4xl md:text-[6rem] font-bold mt-1 leading-none">Scroll Animations</span>
+              Elevate your success <br />
+              
+              <span className="text-4xl md:text-[5rem] font-bold mt-1 leading-none">With Our <span className="bg-gradient-to-r from-orange-600 via-button to-button text-transparent bg-clip-text">Expertise</span></span>
             </h1>
           </>
         }

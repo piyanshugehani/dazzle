@@ -29,7 +29,7 @@ export default function Home() {
   });
 
   // Interpolating background color transition
-  const bgMotionValue = useTransform(scrollYProgress, [0, 1], ["#FFFFFF", "#F8E6E9"]);
+  const bgMotionValue = useTransform(scrollYProgress, [0, 1], ["#FFFFFF", "#FFF4E6"]);
 
   // State to store extracted color string
   const [bgColor, setBgColor] = useState("#FFFFFF");
@@ -101,7 +101,7 @@ export default function Home() {
       >
         <div className="text-center justify-center items-center space-y-6">
           {/* For Large Screens - BoxReveal Effects */}
-          <div className="hidden lg:block space-y-6">
+          <div className="hidden lg:block space-y-3">
             
               <h1 className="text-6xl md:text-9xl lg:text-9xl font-heading font-bold mt-16 
                              bg-gradient-to-r from-orange-600 via-button to-orange-600 
@@ -113,7 +113,7 @@ export default function Home() {
 
            
               <h2 className="md:px-36 text-4xl md:text-5xl font-bold font-subheading text-center" style={{ zIndex: 1000 }}>
-                Transforming Research into Actionable Intelligence
+                Data in Action, Strategy in Motion
               </h2>
           
 
@@ -125,18 +125,18 @@ export default function Home() {
            
               
 
-              <div className="justify-center items-center gap-6">
+              <div className="justify-center items-center gap-6" style={{marginTop: "30px", zIndex: 1000}}>
               <Button className="relative overflow-hidden bg-gradient-to-br from-orange-600 via-button to-button 
                                  hover:from-button hover:to-button transition-all duration-300 
-                                 text-white px-6 py-4 rounded-full text-lg font-content 
+                                 text-white px-8 py-5 rounded-full text-lg font-content 
                                  before:content-[''] before:absolute before:top-0 before:left-[-75%] 
                                  before:w-1/3 before:h-full before:bg-white/20 before:skew-x-[-25deg] 
                                  before:transition-all before:duration-500 hover:before:left-[125%] mr-2 cursor-pointer"
                                  style={{ zIndex: 1000, cursor: "pointer" }}>
-                Contact Sales
+                Connect Us
               </Button>
           <Button variant="outline" className="relative overflow-hidden transition-all duration-300 
-                                 px-6 py-4 rounded-full text-lg font-content 
+                                 px-8 py-5 rounded-full text-lg font-content 
                                  before:content-[''] before:absolute before:top-0 before:left-[-75%] 
                                  before:w-1/3 before:h-full before:bg-white/20 before:skew-x-[-25deg] 
                                  before:transition-all before:duration-500 hover:before:left-[125%]"
@@ -155,7 +155,7 @@ export default function Home() {
             </h1>
 
             <h2 className="text-lg md:text-xl font-subheading font-bold">
-              Transforming Research into Actionable Intelligence
+            Data in Action, Strategy in Motion
             </h2>
 
             <p className="text-gray-600 md:text-lg font-content">
@@ -168,7 +168,7 @@ export default function Home() {
                                before:content-[''] before:absolute before:top-0 before:left-[-75%] 
                                before:w-1/3 before:h-full before:bg-white/20 before:skew-x-[-25deg] 
                                before:transition-all before:duration-500 hover:before:left-[125%] cursor-pointer mr-2"
-                               style={{ zIndex: 1000, cursor: "pointer" }}
+                               style={{ cursor: "pointer" }}
                                >
               Contact Sales
             </Button>
@@ -177,14 +177,14 @@ export default function Home() {
                                  before:content-[''] before:absolute before:top-0 before:left-[-75%] 
                                  before:w-1/3 before:h-full before:bg-white/20 before:skew-x-[-25deg] 
                                  before:transition-all before:duration-500 hover:before:left-[125%]"
-                                 style={{ zIndex: 1000, cursor: "pointer" }}>Learn More</Button>
+                                 style={{ cursor: "pointer" }}>Learn More</Button>
           </div>
         </div>
         
       </motion.div>
 
       <HeroScrollWithVideo/>
-      <div ref={unlockRef}></div>
+      {/* <div ></div> */}
 
       {/* Industry Expertise */}
       <motion.div
@@ -194,9 +194,10 @@ export default function Home() {
         viewport={{ once: false, amount: 0.5 }}
         className="h-full shadow-[0px_0px_0px_rgba(0,0,0,0.3)]"
       >
-        <h2 className="pt-20 pb-28 md:px-36 font-bold font-subheading  z-10 relative lg:block hidden mx-24 text-4xl md:text-5xl text-center">
-          Elevate Your <span className="bg-gradient-to-r from-orange-600 via-button to-button text-transparent bg-clip-text">Success</span> with Our <span className="bg-gradient-to-r from-button via-button to-button text-transparent bg-clip-text">Expertise</span>
-        </h2>
+        <h2 className="pt-20 pb-28 md:px-36 font-bold font-subheading z-10 relative lg:block hidden mx-24 text-4xl md:text-5xl text-center">
+  Your <span className="bg-gradient-to-r from-orange-600 via-button to-button text-transparent bg-clip-text">Vision</span>, Our <span className="bg-gradient-to-r from-button via-button to-button text-transparent bg-clip-text">Strategy</span> – Excellence in Action
+</h2>
+
         <section className="md:px-20 lg:px-20 px-4 relative lg:flex lg:justify-center lg:items-center">
           <div className="absolute inset-0 z-0 flex justify-center items-center">
             <Image
@@ -212,7 +213,7 @@ export default function Home() {
 
           {/* Mobile version of the heading */}
           <h2 className="text-3xl md:text-5xl font-bold font-subheading mb-40 z-10 relative lg:hidden text-center">
-            Elevate Your <span className="bg-gradient-to-r from-orange-600 via-button to-button text-transparent bg-clip-text">Success</span> with Our <span className="bg-gradient-to-r from-orange-600 via-button to-button text-transparent bg-clip-text">Expertise</span>
+          Your <span className="bg-gradient-to-r from-orange-600 via-button to-button text-transparent bg-clip-text">Vision</span>, Our <span className="bg-gradient-to-r from-button via-button to-button text-transparent bg-clip-text">Strategy</span> – Excellence in Action
           </h2>
 
           <div className="lg:flex lg:justify-center lg:items-center lg:mt-16 z-10 relative">
@@ -228,6 +229,7 @@ export default function Home() {
         variants={fadeInSlideUp}
         viewport={{ once: false, amount: 0.5 }}
         className="md:px-24 lg:px-24 px-2 pt-10 md:pt-8"
+        ref={unlockRef}
       >
         <MarqueeDemo />
       </motion.div>

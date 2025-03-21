@@ -41,7 +41,7 @@ const FooterDazzle = () => {
             height={30} // Adjust height as needed
             className="w-auto h-8"
           />
-          <div className="text-sm opacity-70 font-subheading">A Market Research Company</div>
+          <div className="text-sm opacity-70 font-subheading">Data in Action, Strategy in Motion</div>
         </div>
       </div>
     </footer>

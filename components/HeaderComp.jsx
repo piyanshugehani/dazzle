@@ -81,7 +81,7 @@ const HeaderComp = ({ bgColor = "#FFFFFF" }) => {     //#F8EDED
       {isOpen && (
         <>
           <div
-            className="fixed inset-0 bg-black bg-opacity-50 z-40"
+            className="fixed inset-0 bg-black bg-opacity-50 z-40" style={{ backdropFilter: "blur(5px)" }}
             onClick={() => setIsOpen(false)}
           />
           <motion.div
