@@ -146,7 +146,7 @@ export default function Home() {
           </div>
 
           {/* For Mobile - Simple Display without Animations */}
-          <div className="block lg:hidden space-y-4 px-4">
+          <div className="block lg:hidden space-y-4 p-8">
             <h1 className="text-7xl md:text-6xl font-heading font-extrabold mt-12 
                            bg-gradient-to-r from-orange-600 via-button to-orange-600 
                            text-transparent bg-clip-text 
