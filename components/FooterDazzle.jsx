@@ -1,19 +1,18 @@
 import Image from "next/image";
 import Facebook from "./facebook.svg";
 import Whatsapp from "./whatsapp.svg";
-// import Instagram from "./../public/insta.svg";
-import Instagram from "./Insta.svg"
-import Twitter from "./twitter.svg"
+import Instagram from "./Insta.svg";
+import Twitter from "./twitter.svg";
 import Linkedin from "./linkedin.svg";
-import { Globe } from "lucide-react";
+import { Globe, Mail } from "lucide-react";
 
 const FooterDazzle = () => {
   const socialIcons = [
-    { src: Whatsapp, alt: "Whatsapp" },
-    { src: Facebook, alt: "Facebook" },
-    { src: Twitter, alt: "Twitter" },
-    { src: Linkedin, alt: "Linkedin" },
-    { src: Instagram, alt: "Instagram" },
+    { src: Whatsapp, alt: "Whatsapp", href: "https://wa.me/your-number" },
+    { src: Facebook, alt: "Facebook", href: "https://facebook.com/your-page" },
+    { src: Mail, alt: "Email", href: "mailto:dazzle.outreach@gmail.com", isIcon: true },
+    { src: Linkedin, alt: "Linkedin", href: "https://www.linkedin.com/company/dazzle-consulting-global/?viewAsMember=true" },
+    { src: Instagram, alt: "Instagram", href: "https://www.instagram.com/dazzle.consulting?igsh=MWEybno4cHJ0a2dhMA%3D%3D&utm_source=qr" },
   ];
 
   return (
@@ -21,27 +20,42 @@ const FooterDazzle = () => {
       <div className="max-w-6xl mx-auto">
         {/* Social Icons */}
         <div className="flex justify-center gap-6 mb-8">
-          {socialIcons.map(({ src, alt }, index) => (
-            <div
+          {socialIcons.map(({ src, alt, href, isIcon }, index) => (
+            <a
               key={index}
+              href={href}
+              target="_blank"
+              rel="noopener noreferrer"
               className="w-10 h-10 flex items-center justify-center rounded-full bg-white/20 hover:bg-white/80 transition-colors cursor-pointer"
+              aria-label={alt}
             >
-              <Image src={src} alt={alt} width={20} height={20} />
-            </div>
+              {isIcon ? (
+                // Lucide icon (Mail)
+                // <src className="w-5 h-5 text-white" />
+                <Mail className="w-5 h-5 text-black" />
+              ) : (
+                // Static image (SVG)
+                <Image src={src} alt={alt} width={20} height={20} />
+              )}
+            </a>
           ))}
         </div>
 
         {/* Branding */}
         <div className="flex flex-col items-center gap-1 text-center">
           <Globe className="w-8 h-8" />
-          <Image
-            src={'./logo2.png'} // Path to your logo
-            alt="Dazzle Logo"
-            width={100} // Adjust width as needed
-            height={30} // Adjust height as needed
-            className="w-auto h-8"
-          />
-          <div className="text-sm opacity-70 font-subheading">Data in Action, Strategy in Motion</div>
+          <a href="/" className="mt-2">
+            <Image
+              src={"./logo2.png"}
+              alt="Dazzle Logo"
+              width={100}
+              height={30}
+              className="w-auto h-8"
+            />
+          </a>
+          <div className="text-sm opacity-70 font-subheading">
+            Data in Action, Strategy in Motion
+          </div>
         </div>
       </div>
     </footer>

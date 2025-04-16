@@ -241,18 +241,19 @@ export default function Home() {
         variants={fadeInSlideUp}
         viewport={{ once: false, amount: 0.5 }}
         className="px-4 md:px-16 lg:px-24 md:pb-10 lg:pb-12 md:pt-10 lg:pt-12"
+        ref={fieldProtocolRef}
       >
         <CaseStudies />
       </motion.div>
 
-      <div className="pt-20">
+      <div className="pt-20" >
         {/* Field Quality Protocols */}
         <motion.div
           initial="hidden"
           whileInView="visible"
           variants={fadeInSlideUp}
           viewport={{ once: false, amount: 0.5 }}
-          ref={fieldProtocolRef}
+          
         >
           <FieldProtocols />
         </motion.div>
