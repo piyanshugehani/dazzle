@@ -31,8 +31,8 @@ export function HeroVideoDialog({
             <div className="bg-white/90 dark:bg-black/70 p-4 rounded-full">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
+                width="48"
+                height="48"
                 viewBox="0 0 24 24"
                 fill="none"
                 stroke="currentColor"
@@ -46,11 +46,11 @@ export function HeroVideoDialog({
             </div>
           </div>
           <Image
-            src={"./dummy.png"}
+            src={"./final.png"}
             alt={thumbnailAlt}
-            width={900}
-            height={450}
-            className="w-full h-full object-cover rounded-xl"
+            width={1900}
+            height={900}
+            className="object-cover rounded-xl"
           />
         </button>
       </DialogTrigger>

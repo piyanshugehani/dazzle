@@ -8,7 +8,7 @@ export function HeroScrollWithVideo() {
       <ContainerScroll
         titleComponent={
           <>
-            <h1 className="text-4xl font-semibold text-black dark:text-white">
+            <h1 className="text-4xl font-semibold text-black dark:text-white mb-8">
               Elevate your success <br />
               
               <span className="text-4xl md:text-[5rem] font-bold mt-1 leading-none">With Our <span className="bg-gradient-to-r from-orange-600 via-button to-button text-transparent bg-clip-text">Expertise</span></span>
@@ -22,8 +22,8 @@ export function HeroScrollWithVideo() {
               <HeroVideoDialog
                 className="block dark:hidden h-full"
                 animationStyle="from-center"
-                videoSrc="https://www.youtube.com/embed/qh3NGpYRG3I?si=4rb-zSdDkVK9qxxb"
-                thumbnailSrc={"./dummy.png"}
+                videoSrc="https://drive.google.com/file/d/1UvR24fW2ZpgDMGx-DtFwXz2cPZhW63Q7/preview"
+                thumbnailSrc="https://drive.google.com/uc?export=view&id=1UvR24fW2ZpgDMGx-DtFwXz2cPZhW63Q7"
                 thumbnailAlt="Hero Video"
               />
             </div>
