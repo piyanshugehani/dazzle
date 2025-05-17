@@ -29,7 +29,7 @@ export default function Home() {
   });
 
   // Interpolating background color transition
-  const bgMotionValue = useTransform(scrollYProgress, [0, 1], ["#FFFFFF", "#FFF4E6"]);
+  const bgMotionValue = useTransform(scrollYProgress, [0, 1], ["#FFFFFF", "#FFF"]); //#FFF4E6
 
   // State to store extracted color string
   const [bgColor, setBgColor] = useState("#FFFFFF");
@@ -241,9 +241,8 @@ export default function Home() {
         variants={fadeInSlideUp}
         viewport={{ once: false, amount: 0.5 }}
         className="px-4 md:px-16 lg:px-24 md:pb-10 lg:pb-12 md:pt-10 lg:pt-12"
-        ref={fieldProtocolRef}
       >
-        <CaseStudies />
+        <CaseStudies refer={fieldProtocolRef}/>
       </motion.div>
 
       <div className="pt-20" >
@@ -253,7 +252,6 @@ export default function Home() {
           whileInView="visible"
           variants={fadeInSlideUp}
           viewport={{ once: false, amount: 0.5 }}
-          
         >
           <FieldProtocols />
         </motion.div>

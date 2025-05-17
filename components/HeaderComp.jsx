@@ -13,14 +13,13 @@ const HeaderComp = ({ bgColor = "#FFFFFF" }) => {     //#F8EDED
     <header className="fixed top-0 left-0 right-0 z-50 pt-2 pb-1 px-2 lg:pt-4 lg:pb-2 lg:px-16 md:px-16 transition-colors duration-500" style={{ backgroundColor: bgColor }}>
       <div className="hidden lg:flex justify-between items-center bg-secondary shadow-[0_0_5px_rgba(0,0,0,0.2)] border border-button/20 rounded-full px-8 py-2">
         {/* Logo - Desktop */}
-        <Link href="/" className="hidden md:flex items-center gap-2 bg-secondary/80 p-2 rounded-lg">
-          <Globe className="w-8 h-8" />
+        <Link href="/" className="hidden md:flex items-center gap-2 bg-secondary/80 rounded-lg">
           <Image
-            src={'/logo-white.png'}
+            src={'/logo-final.svg'}
             alt="Dazzle Logo"
-            width={70}
-            height={20}
-            className="w-auto h-8"
+            width={100}
+            height={50}
+            className="w-auto h-14"
           />
         </Link>
 
@@ -52,18 +51,14 @@ const HeaderComp = ({ bgColor = "#FFFFFF" }) => {     //#F8EDED
       {/* Mobile Navigation */}
       <div className="lg:hidden flex items-center justify-between bg-secondary px-4 py-2 shadow-md border border-button/20 rounded-full">
         {/* Logo - Mobile */}
-        <Link href="/" className="flex items-center gap-2">
-          <Globe className="w-7 h-7 text-primary" />
-        </Link>
-
         {/* Centered Logo */}
         <Link href="/">
           <Image
-            src={'/logo-white.png'}
+            src={'/logo-final.svg'}
             alt="Dazzle Logo"
             width={80}
             height={25}
-            className="w-auto h-9"
+            className="w-auto h-12"
           />
         </Link>
 

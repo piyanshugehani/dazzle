@@ -12,23 +12,23 @@ interface ResearchStudy {
 
 const researchStudies: ResearchStudy[] = [
   {
-    title: "Health and Sexual Behaviour Study",
+    title: "Health and sexual behaviour study",
     description: "Research study in Maharashtra involving in-depth interviews and structured questionnaires administered to 2,400 men and women across 5 occupational groups. Included focus group discussions.",
   },
   {
-    title: "Educational Impact Study", 
+    title: "Educational impact study", 
     description: "Coordinated longitudinal impact study of educational programme for children on Television and experimental design to measure impact of communication for Sesame Street adaptation in India across 8 states.",
   },
   {
-    title: "National Health and Education Study",
+    title: "National health and education Study",
     description: "NHED study focused on women in Rural Maharashtra, examining health and education outcomes.",
   },
   {
-    title: "Financial Impact Study",
+    title: "Financial impact study",
     description: "Coordinated study on impact of education and possibilities of small loan facilities in villages at Warangal near Hyderabad.",
   },
   {
-    title: "Sexual Health Research",
+    title: "Sexual health research",
     description: "Research study on sexually transmitted diseases in Maharashtra, Karnataka and Mumbai for PSI through Mystery shopping and in-depth interviews.",
   },
 ]
@@ -51,7 +51,6 @@ export default function ResearchExperience() {
     <section className="w-full py-12 bg-secondary-light relative rounded-lg">
       <div className="container px-4 md:px-6">
       
-
         <div 
           className="relative group"
           onMouseEnter={() => setIsHovered(true)}
@@ -83,7 +82,43 @@ export default function ResearchExperience() {
                 >
                 
                   <CardHeader>
-                    <div className="w-12 h-12 rounded-full bg-gradient-to-br from-green-400 via-yellow-400 to-pink-400 mb-4" />
+                    <div className="relative w-12 h-12 mb-4">
+                      {study.title.includes("Health") && (
+                        <img 
+                          src="/icons/health.png" 
+                          alt="Health Research"
+                          className="w-full h-full object-cover rounded-full"
+                        />
+                      )}
+                      {study.title.includes("Education") && (
+                        <img 
+                          src="/icons/edu.png" 
+                          alt="Education Research"
+                          className="w-full h-full object-cover rounded-full"
+                        />
+                      )}
+                      {study.title.includes("National") && (
+                        <img 
+                          src="/icons/national.png" 
+                          alt="Financial Research"
+                          className="w-full h-full object-cover rounded-full"
+                        />
+                      )}
+                      {study.title.includes("Financial") && (
+                        <img 
+                          src="/icons/financial.png" 
+                          alt="Financial Research"
+                          className="w-full h-full object-cover rounded-full"
+                        />
+                      )}
+                      {study.title.includes("Sexual") && (
+                        <img 
+                          src="/icons/health2.png" 
+                          alt="Sexual and health Research"
+                          className="w-full h-full object-cover rounded-full"
+                        />
+                      )}
+                    </div>
                     <h3 className="text-lg font-semibold font-subheading text-button">{study.title}</h3>
                   </CardHeader>
                   <CardContent>
@@ -95,28 +130,28 @@ export default function ResearchExperience() {
           </div>
 
           <Button
-  variant="ghost"
-  size="icon"
-  className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 
-             bg-black/60 hover:bg-black/80 text-white rounded-full 
-             opacity-0 group-hover:opacity-100 transition-opacity 
-             hidden sm:flex"
-  onClick={() => scroll("left")}
->
-  <ChevronLeft className="h-6 w-6" />
-</Button>
+            variant="ghost"
+            size="icon"
+            className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 
+                       bg-black/60 hover:bg-black/80 text-white rounded-full 
+                       opacity-0 group-hover:opacity-100 transition-opacity 
+                       hidden sm:flex"
+            onClick={() => scroll("left")}
+          >
+            <ChevronLeft className="h-6 w-6" />
+          </Button>
 
-<Button
-  variant="ghost"
-  size="icon"
-  className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 
-             bg-black/60 hover:bg-black/80 text-white rounded-full 
-             opacity-0 group-hover:opacity-100 transition-opacity 
-             hidden sm:flex"
-  onClick={() => scroll("right")}
->
-  <ChevronRight className="h-6 w-6" />
-</Button>
+          <Button
+            variant="ghost"
+            size="icon"
+            className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 
+                       bg-black/60 hover:bg-black/80 text-white rounded-full 
+                       opacity-0 group-hover:opacity-100 transition-opacity 
+                       hidden sm:flex"
+            onClick={() => scroll("right")}
+          >
+            <ChevronRight className="h-6 w-6" />
+          </Button>
 
         </div>
       </div>

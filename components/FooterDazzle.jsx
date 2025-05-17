@@ -5,6 +5,7 @@ import Instagram from "./Insta.svg";
 import Twitter from "./twitter.svg";
 import Linkedin from "./linkedin.svg";
 import { Globe, Mail } from "lucide-react";
+import Link from "next/link";
 
 const FooterDazzle = () => {
   const socialIcons = [
@@ -42,17 +43,16 @@ const FooterDazzle = () => {
         </div>
 
         {/* Branding */}
-        <div className="flex flex-col items-center gap-1 text-center">
-          <Globe className="w-8 h-8" />
-          <a href="/" className="mt-2">
+        <div className="flex flex-col items-center text-center">
+          <Link href="/">
             <Image
-              src={"./logo2.png"}
+              src={"./logo-final.svg"}
               alt="Dazzle Logo"
               width={100}
-              height={30}
-              className="w-auto h-8"
+              height={80}
+              className="w-auto h-16 [filter:invert(90%)_grayscale(100%)]"
             />
-          </a>
+          </Link>
           <div className="text-sm opacity-70 font-subheading">
             Data in Action, Strategy in Motion
           </div>
