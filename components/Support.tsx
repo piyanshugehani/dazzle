@@ -1,7 +1,6 @@
 "use client";
 
 import React, { type SVGProps } from "react";
-
 import { LogoCarousel } from "./logo-carousel";
 import Image from "next/image";
 
@@ -14,9 +13,10 @@ const allLogos = [
         <Image
           src="/client-list/birla-sun-life.webp"
           alt="Birla Sun Life Insurance"
-          width={200}
-          height={100}
-          style={{ width: 'auto', height: 'auto' }}
+          width={550}
+          height={120}
+          style={{ objectFit: 'contain', maxWidth: '100%', height: '100%' }}
+          priority
         />
       )
     }
@@ -31,7 +31,8 @@ const allLogos = [
           alt="Contract"
           width={200}
           height={100}
-          style={{ width: 'auto', height: 'auto' }}
+          style={{ objectFit: 'contain', maxWidth: '100%',height:'100%' }}
+          priority
         />
       )
     }
@@ -46,7 +47,8 @@ const allLogos = [
           alt="Evalueserve"
           width={200}
           height={100}
-          style={{ width: 'auto', height: 'auto' }}
+          style={{ objectFit: 'contain', maxWidth: '100%',height:'100%' }}
+          priority
         />
       )
     }
@@ -58,10 +60,11 @@ const allLogos = [
       return (
         <Image
           src="/client-list/drishit.png"
-          alt="Drshit"
+          alt="Drshti"
           width={200}
           height={100}
-          style={{ width: 'auto', height: 'auto' }}
+          style={{ objectFit: 'contain', maxWidth: '100%',height:'100%' }}
+          priority
         />
       )
     }
@@ -76,7 +79,8 @@ const allLogos = [
           alt="everest"
           width={200}
           height={100}
-          style={{ width: 'auto', height: 'auto' }}
+          style={{ objectFit: 'contain', maxWidth: '100%',height:'100%' }}
+          priority
         />
       )
     }
@@ -91,7 +95,8 @@ const allLogos = [
           alt="hind"
           width={200}
           height={100}
-          style={{ width: 'auto', height: 'auto' }}
+          style={{ objectFit: 'contain', maxWidth: '100%',height:'100%' }}
+          priority
         />
       )
     }
@@ -106,7 +111,8 @@ const allLogos = [
           alt="idea"
           width={200}
           height={100}
-          style={{ width: 'auto', height: 'auto' }}
+          style={{ objectFit: 'contain', maxWidth: '100%',height:'100%' }}
+          priority
         />
       )
     }
@@ -121,7 +127,8 @@ const allLogos = [
           alt="kantar"
           width={200}
           height={100}
-          style={{ width: 'auto', height: 'auto' }}
+          style={{ objectFit: 'contain', maxWidth: '100%',height:'100%' }}
+          priority
         />
       )
     }
@@ -136,7 +143,8 @@ const allLogos = [
           alt="kotak"
           width={200}
           height={100}
-          style={{ width: 'auto', height: 'auto' }}
+          style={{ objectFit: 'contain', maxWidth: '100%',height:'100%' }}
+          priority
         />
       )
     }
@@ -151,7 +159,8 @@ const allLogos = [
           alt="mul"
           width={200}
           height={100}
-          style={{ width: 'auto', height: 'auto' }}
+          style={{ objectFit: 'contain', maxWidth: '100%',height:'100%' }}
+          priority
         />
       )
     }
@@ -166,7 +175,8 @@ const allLogos = [
           alt="ni"
           width={200}
           height={100}
-          style={{ width: 'auto', height: 'auto' }}
+          style={{ objectFit: 'contain', maxWidth: '100%',height:'100%' }}
+          priority
         />
       )
     }
@@ -181,7 +191,8 @@ const allLogos = [
           alt="plan"
           width={200}
           height={100}
-          style={{ width: 'auto', height: 'auto' }}
+          style={{ objectFit: 'contain', maxWidth: '100%',height:'100%' }}
+          priority
         />
       )
     }
@@ -196,7 +207,8 @@ const allLogos = [
           alt="plas"
           width={200}
           height={100}
-          style={{ width: 'auto', height: 'auto' }}
+          style={{ objectFit: 'contain', maxWidth: '100%',height:'100%' }}
+          priority
         />
       )
     }
@@ -211,37 +223,40 @@ const allLogos = [
           alt="red"
           width={200}
           height={100}
-          style={{ width: 'auto', height: 'auto' }}
+          style={{ objectFit: 'contain', maxWidth: '100%',height:'100%' }}
+          priority
         />
       )
     }
   },
   { 
-    name: "lukes", 
+    name: "St. Luke's", 
     id: 15, 
     img: function LogoImage(props: SVGProps<SVGSVGElement>) {
       return (
         <Image
           src="/client-list/lukes.jpeg"
-          alt="lukes"
-          width={200}
-          height={100}
-          style={{ width: 'auto', height: 'auto' }}
+          alt="St. Luke's"
+          width={250}
+          height={120}
+          style={{ objectFit: 'contain', maxWidth: '100%',height:'100%' }}
+          priority
         />
       )
     }
   },
   { 
-    name: "vert", 
+    name: "VMLY&R", 
     id: 16, 
     img: function LogoImage(props: SVGProps<SVGSVGElement>) {
       return (
         <Image
           src="/client-list/vert.webp"
-          alt="webp"
+          alt="VMLY&R"
           width={200}
           height={100}
-          style={{ width: 'auto', height: 'auto' }}
+          style={{ objectFit: 'contain', maxWidth: '100%',height:'100%' }}
+          priority
         />
       )
     }
@@ -256,15 +271,12 @@ const allLogos = [
           alt="zen"
           width={200}
           height={100}
-          style={{ width: 'auto', height: 'auto' }}
+          style={{ objectFit: 'contain', maxWidth: '100%',height:'100%' }}
+          priority
         />
       )
     }
   },
-  
-  
-  // { name: "Vercel", id: 4, img: VercelIcon },
-  // ... rest of the logos remain unchanged ...
 ];
 
 export function LogoCarouselDemo() {
@@ -272,14 +284,14 @@ export function LogoCarouselDemo() {
     <div className="space-y-8 py-24">
       <div className="mx-auto flex w-full max-w-screen-2xl flex-col items-center space-y-8">
         <div className="text-center mb-6">
-        <h2 className="text-3xl md:text-5xl font-subheading font-bold md:mb-4 lg:mb-4 mb-4 ">Already <span className="bg-gradient-to-r from-orange-600 via-button to-button
-               text-transparent bg-clip-text">Chosen</span> By</h2>
-            <p className="text-lg text-gray-600 mt-4">
-                Trusted by the world's best 
-            </p>
+          <h2 className="text-3xl md:text-5xl font-subheading font-bold md:mb-4 lg:mb-4 mb-4">
+            Already <span className="bg-gradient-to-r from-orange-600 via-button to-button text-transparent bg-clip-text">Chosen</span> By
+          </h2>
+          <p className="text-lg text-gray-600 mt-4">
+            Trusted by the world's best 
+          </p>
         </div>
-
-        <LogoCarousel columnCount={5} logos={allLogos} /> 
+        <LogoCarousel columnCount={4} logos={allLogos} />
       </div>
     </div>
   );
