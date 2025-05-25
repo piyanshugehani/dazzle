@@ -8,7 +8,7 @@ import seagram from "@/public/cs/seagram.png"
 import itc from "@/public/cs/itc.png"
 import sol from "@/public/cs/sol.jpg"
 import samsung from "@/public/cs/samsung.jpeg"
-import pred from "@/public/cs/pred.png"
+import pred from "@/public/cs/predd.png"
 
 // Simplified CaseStudy type for the carousel display
 interface CarouselCaseStudy {
