@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { BookOpen, ChevronRight, Globe, HomeIcon, Menu, Settings, User, X } from "lucide-react";
+import { BookOpen, ChevronRight, Globe, HomeIcon, Menu, Settings, User, X, Phone } from "lucide-react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 
@@ -37,14 +37,18 @@ const HeaderComp = ({ bgColor = "#FFFFFF" }) => {     //#F8EDED
             Methodology
             <span className="absolute left-0 bottom-0 h-0.5 w-full bg-button transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" />
           </Link>
-          <button className="relative overflow-hidden bg-gradient-to-br from-orange-600 via-button to-button 
+          <Link href="/contact" className="relative group hover:text-button">
+            Contact
+            <span className="absolute left-0 bottom-0 h-0.5 w-full bg-button transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" />
+          </Link>
+          <Link href="/" className="relative overflow-hidden bg-gradient-to-br from-orange-600 via-button to-button 
                          hover:from-button hover:to-button transition-all duration-300 
                          text-white px-6 py-2 rounded-3xl text-lg font-content 
                          before:content-[''] before:absolute before:top-0 before:left-[-75%] 
                          before:w-1/3 before:h-full before:bg-white/20 before:skew-x-[-25deg] 
                          before:transition-all before:duration-500 hover:before:left-[125%]">
             Get Started
-          </button>
+          </Link>
         </nav>
       </div>
 
@@ -107,6 +111,10 @@ const HeaderComp = ({ bgColor = "#FFFFFF" }) => {     //#F8EDED
               <hr className="border-gray-400" />
               <Link href="/methodology" className="flex items-center gap-2 hover:text-button" onClick={() => setIsOpen(false)}>
                 <BookOpen className="w-5 h-5" /> Methodology <ChevronRight className="w-4 h-4" />
+              </Link>
+              <hr className="border-gray-400" />
+              <Link href="/contact" className="flex items-center gap-2 hover:text-button" onClick={() => setIsOpen(false)}>
+                <Phone className="w-5 h-5" /> Contact <ChevronRight className="w-4 h-4" />
               </Link>
             </nav>
           </motion.div>

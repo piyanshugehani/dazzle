@@ -277,6 +277,86 @@ const allLogos = [
       )
     }
   },
+  { 
+    name: "itc", 
+    id: 18, 
+    img: function LogoImage(props: SVGProps<SVGSVGElement>) {
+      return (
+        <Image
+          src="/client-list/itc.png"
+          alt="itc"
+          width={200}
+          height={100}
+          style={{ objectFit: 'contain', maxWidth: '100%',height:'100%' }}
+          priority
+        />
+      )
+    }
+  },
+  { 
+    name: "samsung", 
+    id: 19, 
+    img: function LogoImage(props: SVGProps<SVGSVGElement>) {
+      return (
+        <Image
+          src="/client-list/samsung.png"
+          alt="samsung"
+          width={200}
+          height={100}
+          style={{ objectFit: 'contain', maxWidth: '100%',height:'100%' }}
+          priority
+        />
+      )
+    }
+  },
+  { 
+    name: "seagram", 
+    id: 20, 
+    img: function LogoImage(props: SVGProps<SVGSVGElement>) {
+      return (
+        <Image
+          src="/client-list/seagram.png"
+          alt="seagram"
+          width={200}
+          height={100}
+          style={{ objectFit: 'contain', maxWidth: '100%',height:'100%' }}
+          priority
+        />
+      )
+    }
+  },
+  { 
+    name: "sol", 
+    id: 21, 
+    img: function LogoImage(props: SVGProps<SVGSVGElement>) {
+      return (
+        <Image
+          src="/client-list/sol.jpg"
+          alt="sol"
+          width={200}
+          height={100}
+          style={{ objectFit: 'contain', maxWidth: '100%',height:'100%' }}
+          priority
+        />
+      )
+    }
+  },
+  { 
+    name: "predictorate", 
+    id: 22, 
+    img: function LogoImage(props: SVGProps<SVGSVGElement>) {
+      return (
+        <Image
+          src="/client-list/predd.png"
+          alt="predd"
+          width={200}
+          height={100}
+          style={{ objectFit: 'contain', maxWidth: '100%',height:'100%' }}
+          priority
+        />
+      )
+    }
+  },
 ];
 
 export function LogoCarouselDemo() {
@@ -285,13 +365,13 @@ export function LogoCarouselDemo() {
       <div className="mx-auto flex w-full max-w-screen-2xl flex-col items-center space-y-8">
         <div className="text-center mb-6">
           <h2 className="text-3xl md:text-5xl font-subheading font-bold md:mb-4 lg:mb-4 mb-4">
-            Already <span className="bg-gradient-to-r from-orange-600 via-button to-button text-transparent bg-clip-text">Chosen</span> By
+            Our <span className="bg-gradient-to-r from-orange-600 via-button to-button text-transparent bg-clip-text">Consultants</span> have <span className="bg-gradient-to-r from-orange-600 via-button to-button text-transparent bg-clip-text">worked</span> with
           </h2>
           <p className="text-lg text-gray-600 mt-4">
-            Trusted by the world's best 
+          Guided by Data. Backed by Experience. 
           </p>
         </div>
-        <LogoCarousel columnCount={4} logos={allLogos} />
+        <LogoCarousel columnCount={window.innerWidth <= 768 ? 3 : 4} logos={allLogos} />
       </div>
     </div>
   );

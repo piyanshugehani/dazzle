@@ -123,24 +123,35 @@ export default function Home() {
               </p>
           
            
-              
-
               <div className="justify-center items-center gap-6" style={{marginTop: "30px", zIndex: 1000}}>
-              <Button className="relative overflow-hidden bg-gradient-to-br from-orange-600 via-button to-button 
+              <Button onClick={() => {
+                    const heroVideo = document.querySelector('[id="hero-video-section"]');
+                    if (heroVideo) {
+                      const offset = heroVideo.getBoundingClientRect().height / 10;
+                      window.scrollTo({
+                        top: heroVideo.offsetTop + offset,
+                        behavior: 'smooth'
+                      });
+                    }
+                  }} className="relative overflow-hidden bg-gradient-to-br from-orange-600 via-button to-button 
                                  hover:from-button hover:to-button transition-all duration-300 
                                  text-white px-8 py-5 rounded-full text-lg font-content 
                                  before:content-[''] before:absolute before:top-0 before:left-[-75%] 
                                  before:w-1/3 before:h-full before:bg-white/20 before:skew-x-[-25deg] 
                                  before:transition-all before:duration-500 hover:before:left-[125%] mr-2 cursor-pointer"
                                  style={{ zIndex: 1000, cursor: "pointer" }}>
-                Connect Us
+                Learn More
               </Button>
-          <Button variant="outline" className="relative overflow-hidden transition-all duration-300 
-                                 px-8 py-5 rounded-full text-lg font-content 
-                                 before:content-[''] before:absolute before:top-0 before:left-[-75%] 
-                                 before:w-1/3 before:h-full before:bg-white/20 before:skew-x-[-25deg] 
-                                 before:transition-all before:duration-500 hover:before:left-[125%]"
-                                 style={{ zIndex: 1000, cursor: "pointer" }}>Learn More</Button>
+          {/* <Button variant="outline" 
+                  
+                  className="relative overflow-hidden transition-all duration-300 
+                            px-8 py-5 rounded-full text-lg font-content 
+                            before:content-[''] before:absolute before:top-0 before:left-[-75%] 
+                            before:w-1/3 before:h-full before:bg-white/20 before:skew-x-[-25deg] 
+                            before:transition-all before:duration-500 hover:before:left-[125%]"
+                  style={{ zIndex: 1000, cursor: "pointer" }}>
+            Learn More
+          </Button> */}
         </div>
           
           </div>
@@ -159,7 +170,7 @@ export default function Home() {
             </h2>
 
             <p className="text-gray-600 md:text-lg font-content">
-              India’s leading hub for data-driven insights, revolutionizing analytics with precision, innovation, and expertise.
+              India's leading hub for data-driven insights, revolutionizing analytics with precision, innovation, and expertise.
             </p>
 
             <Button className="relative overflow-hidden bg-gradient-to-br from-orange-600 via-button to-button 
@@ -182,8 +193,8 @@ export default function Home() {
         </div>
         
       </motion.div>
-
-      <HeroScrollWithVideo/>
+    <div id="hero-video-section"><HeroScrollWithVideo/></div>
+      
       {/* <div ></div> */}
 
       {/* Industry Expertise */}
