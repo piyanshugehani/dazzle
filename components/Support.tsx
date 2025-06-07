@@ -371,7 +371,10 @@ export function LogoCarouselDemo() {
           Guided by Data. Backed by Experience. 
           </p>
         </div>
-        <LogoCarousel columnCount={window.innerWidth <= 768 ? 3 : 4} logos={allLogos} />
+        <LogoCarousel 
+          columnCount={typeof window !== 'undefined' && window.innerWidth <= 768 ? 3 : 4} 
+          logos={allLogos} 
+        />
       </div>
     </div>
   );
