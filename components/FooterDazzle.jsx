@@ -9,8 +9,8 @@ import Link from "next/link";
 
 const FooterDazzle = () => {
   const socialIcons = [
-    { src: Whatsapp, alt: "Whatsapp", href: "https://wa.me/your-number" },
-    { src: Facebook, alt: "Facebook", href: "https://facebook.com/your-page" },
+    // { src: Whatsapp, alt: "Whatsapp", href: "https://wa.me/your-number" },
+    // { src: Facebook, alt: "Facebook", href: "https://facebook.com/your-page" },
     { src: Mail, alt: "Email", href: "mailto:dazzle.outreach@gmail.com", isIcon: true },
     { src: Linkedin, alt: "Linkedin", href: "https://www.linkedin.com/company/dazzle-consulting-global/?viewAsMember=true" },
     { src: Instagram, alt: "Instagram", href: "https://www.instagram.com/dazzle.consulting?igsh=MWEybno4cHJ0a2dhMA%3D%3D&utm_source=qr" },
