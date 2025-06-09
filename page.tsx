@@ -121,13 +121,23 @@ export default function Home() {
               </p>
 
               <div className="flex flex-col space-y-3">
-                <Button className="relative overflow-hidden bg-gradient-to-br from-orange-600 via-button to-button 
-                                hover:from-button hover:to-button transition-all duration-300 
-                                text-white px-6 py-4 rounded-full text-lg font-content">
-                  Contact Sales
-                </Button>
-                <Button variant="outline" className="relative overflow-hidden transition-all duration-300 
-                                  px-6 py-4 rounded-full text-lg font-content">
+                <Button onClick={() => {
+                    const heroVideo = document.querySelector('[id="hero-video-section"]');
+                    if (heroVideo) {
+                      const offset = heroVideo.getBoundingClientRect().height / 10;
+                      window.scrollTo({
+                        top: heroVideo.offsetTop + offset,
+                        behavior: 'smooth'
+                      });
+                    }
+                  }} 
+                  className="relative overflow-hidden bg-gradient-to-br from-orange-600 via-button to-button 
+                           hover:from-button hover:to-button transition-all duration-300 
+                           text-white px-8 py-5 rounded-full text-lg font-content 
+                           before:content-[''] before:absolute before:top-0 before:left-[-75%] 
+                           before:w-1/3 before:h-full before:bg-white/20 before:skew-x-[-25deg] 
+                           before:transition-all before:duration-500 hover:before:left-[125%] mr-2"
+                  style={{ zIndex: 1000 }}>
                   Learn More
                 </Button>
               </div>
