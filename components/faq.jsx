@@ -65,14 +65,14 @@ const FAQSection = () => {
         <p className="text-gray-600 mb-6 font-content">
           Can't find the answer you're looking for? Please chat with our friendly team.
         </p>
-        <button className="relative overflow-hidden bg-gradient-to-br from-orange-600 via-button to-button 
+        <a href="/contact" className="relative overflow-hidden bg-gradient-to-br from-orange-600 via-button to-button 
                          hover:from-button hover:to-button transition-all duration-300 
-                         text-white px-8 py-1 rounded-full text-lg font-content 
+                         text-white px-8 py-2 rounded-full text-lg font-content 
                          before:content-[''] before:absolute before:top-0 before:left-[-75%] 
                          before:w-1/3 before:h-full before:bg-white/20 before:skew-x-[-25deg] 
                          before:transition-all before:duration-500 hover:before:left-[125%]">
           Get in touch
-        </button>
+        </a>
       </div>
     </div>
   );

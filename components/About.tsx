@@ -4,6 +4,7 @@ import { useRef, useEffect } from "react"
 import { motion, useInView, useAnimation } from "framer-motion"
 import { ArrowRight, Award, Lightbulb, TrendingUp, Users } from "lucide-react"
 import Link from "next/link"
+import Image from "next/image"
 import BenefitsWheel from "./Benefits"
 
 export default function AboutUs() {
@@ -26,35 +27,8 @@ export default function AboutUs() {
       </div>
 
       <div className="container mx-auto px-4 relative z-10">
-        {/* Hook Section */}
-        {/* <motion.div
-          ref={ref}
-          initial={{ opacity: 0, y: 50 }}
-          animate={controls}
-          variants={{
-            visible: { opacity: 1, y: 0, transition: { duration: 0.8 } },
-          }}
-          className="max-w-4xl mx-auto text-center mb-20"
-        >
-          <h2 className="text-3xl md:text-5xl font-heading mt-2 mb-6 text-center italic font-bold">Transforming <span className="bg-gradient-to-r from-orange-600 via-button to-button
-               text-transparent bg-clip-text ">Data</span> into <span className="bg-gradient-to-r from-orange-600 via-button to-button
-               text-transparent bg-clip-text">Success</span></h2>
-
-          <motion.p
-            className="font-subheading text-xl md:text-2xl text-gray-700 mb-8"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.4, duration: 0.8 }}
-          >
-            In today's fast-paced, data-driven world, businesses don't just need information—they need intelligence that
-            fuels success. At Dazzle Consulting, we don't just analyze data; we transform it into game-changing
-            strategies.
-          </motion.p>
-        </motion.div> */}
-
-  
-       {/* Experience & Credibility */}
-       <motion.div
+        {/* Experience & Credibility */}
+        <motion.div
           className="mb-24 max-w-7xl mx-auto"
           initial="hidden"
           animate="visible"
@@ -91,11 +65,19 @@ export default function AboutUs() {
             <div className="w-full md:w-1/2 relative">
               <div className="absolute -inset-0.5 bg-red-600/10 rounded-2xl blur-xl opacity-70 group-hover:opacity-100 transition duration-1000"></div>
               <div className="relative rounded-xl overflow-hidden shadow-xl">
-                <img
-                  src="https://d2poqm5pskresc.cloudfront.net/wp-content/uploads/2019/10/Experience-Consulting-Services.jpg"
-                  alt="Data analysis team"
-                  className="w-full h-auto object-cover aspect-video"
-                />
+                <div className="aspect-video relative">
+                  <Image
+                    src="https://d2poqm5pskresc.cloudfront.net/wp-content/uploads/2019/10/Experience-Consulting-Services.jpg"
+                    alt="Data analysis team"
+                    fill
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                    priority
+                    className="object-cover"
+                    loading="eager"
+                    placeholder="blur"
+                    blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/4gHYSUNDX1BST0ZJTEUAAQEAAAHIAAAAAAQwAABtbnRyUkdCIFhZWiAH4AABAAEAAAAAAABhY3NwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA9tYAAQAAAADTLQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAlkZXNjAAAA8AAAACRyWFlaAAABFAAAABRnWFlaAAABKAAAABRiWFlaAAABPAAAABR3dHB0AAABUAAAABRyVFJDAAABZAAAAChnVFJDAAABZAAAAChiVFJDAAABZAAAAChjcHJ0AAABjAAAADxtbHVjAAAAAAAAAAEAAAAMZW5VUwAAAAgAAAAcAHMAUgBHAEJYWVogAAAAAAAAb6IAADj1AAADkFhZWiAAAAAAAABimQAAt4UAABjaWFlaIAAAAAAAACSgAAAPhAAAts9YWVogAAAAAAAA9tYAAQAAAADTLXBhcmEAAAAAAAQAAAACZmYAAPKnAAANWQAAE9AAAApbAAAAAAAAAABtbHVjAAAAAAAAAAEAAAAMZW5VUwAAACAAAAAcAEcAbwBvAGcAbABlACAASQBuAGMALgAgADIAMAAxADb/2wBDABQODxIPDRQSEBIXFRQdHx4dHRsdHR4dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR3/2wBDAR0XFyAeIRshGxsdIR4hHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR3/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAb/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwCdABmX/9k="
+                  />
+                </div>
               </div>
             </div>
             <div className="w-full md:w-1/2">
@@ -128,11 +110,18 @@ export default function AboutUs() {
             <div className="w-full md:w-1/2 relative">
               <div className="absolute -inset-0.5 bg-red-600/10 rounded-2xl blur-xl opacity-70 group-hover:opacity-100 transition duration-1000"></div>
               <div className="relative rounded-xl overflow-hidden shadow-xl">
-                <img
-                  src="https://imageio.forbes.com/specials-images/imageserve/622f537312400185df5a46d1/0x0.jpg?format=jpg&width=1200"
-                  alt="Client success metrics"
-                  className="w-full h-auto object-cover aspect-video"
-                />
+                <div className="aspect-video relative">
+                  <Image
+                    src="https://imageio.forbes.com/specials-images/imageserve/622f537312400185df5a46d1/0x0.jpg"
+                    alt="Client success metrics"
+                    fill
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                    className="object-cover"
+                    loading="lazy"
+                    placeholder="blur"
+                    blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/4gHYSUNDX1BST0ZJTEUAAQEAAAHIAAAAAAQwAABtbnRyUkdCIFhZWiAH4AABAAEAAAAAAABhY3NwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA9tYAAQAAAADTLQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAlkZXNjAAAA8AAAACRyWFlaAAABFAAAABRnWFlaAAABKAAAABRiWFlaAAABPAAAABR3dHB0AAABUAAAABRyVFJDAAABZAAAAChnVFJDAAABZAAAAChiVFJDAAABZAAAAChjcHJ0AAABjAAAADxtbHVjAAAAAAAAAAEAAAAMZW5VUwAAAAgAAAAcAHMAUgBHAEJYWVogAAAAAAAAb6IAADj1AAADkFhZWiAAAAAAAABimQAAt4UAABjaWFlaIAAAAAAAACSgAAAPhAAAts9YWVogAAAAAAAA9tYAAQAAAADTLXBhcmEAAAAAAAQAAAACZmYAAPKnAAANWQAAE9AAAApbAAAAAAAAAABtbHVjAAAAAAAAAAEAAAAMZW5VUwAAACAAAAAcAEcAbwBvAGcAbABlACAASQBuAGMALgAgADIAMAAxADb/2wBDABQODxIPDRQSEBIXFRQdHx4dHRsdHR4dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR3/2wBDAR0XFyAeIRshGxsdIR4hHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR3/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAb/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwCdABmX/9k="
+                  />
+                </div>
               </div>
             </div>
             <div className="w-full md:w-1/2">
@@ -161,92 +150,9 @@ export default function AboutUs() {
           </motion.div>
         </motion.div>
 
-
-        {/* Unique Methodologies */}
-        {/* <motion.div
-          className="mb-24"
-          initial={{ opacity: 0, y: 50 }}
-          animate={controls}
-          variants={{
-            visible: { opacity: 1, y: 0, transition: { duration: 0.8 } },
-          }}
-        >
-         <h2 className="text-3xl md:text-5xl font-heading mt-2 mb-6 text-center italic font-bold">Our <span className="bg-gradient-to-r from-orange-600 via-button to-button
-               text-transparent bg-clip-text ">Innovative</span> Approach</h2>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {[
-              {
-                icon: <Lightbulb className="h-10 w-10 text-red-600" />,
-                title: "Brand Passion Index",
-                description:
-                  "Our groundbreaking methodology that redefined media planning by measuring emotional connections.",
-              },
-              {
-                icon: <TrendingUp className="h-10 w-10 text-red-600" />,
-                title: "Attention Index",
-                description: "Setting new global benchmarks in television and digital engagement metrics.",
-              },
-              {
-                icon: <Users className="h-10 w-10 text-red-600" />,
-                title: "Audience Intelligence",
-                description: "Proprietary algorithms that predict consumer behavior with unprecedented accuracy.",
-              },
-            ].map((item, index) => (
-              <motion.div
-                key={index}
-                className="relative group"
-                initial={{ opacity: 0, y: 30 }}
-                animate={controls}
-                variants={{
-                  visible: {
-                    opacity: 1,
-                    y: 0,
-                    transition: { delay: index * 0.2, duration: 0.8 },
-                  },
-                }}
-              >
-                <div className="absolute -inset-0.5 bg-red-600/10 rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition duration-1000"></div>
-                <div className="relative bg-white p-8 rounded-xl shadow-lg border border-red-50 h-full transform transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl">
-                  <div className="mb-6">{item.icon}</div>
-                  <h3 className="font-heading text-2xl mb-4">{item.title}</h3>
-                  <p className="font-content text-gray-700">{item.description}</p>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </motion.div> */}
-
-       {/* Benefits */}
+        {/* Benefits */}
         <BenefitsWheel/>
-
-        {/* CTA */}
-        <motion.div
-          className="text-center max-w-3xl mx-auto"
-          initial={{ opacity: 0, y: 30 }}
-          animate={controls}
-          variants={{
-            visible: { opacity: 1, y: 0, transition: { delay: 0.2, duration: 0.8 } },
-          }}
-        >
-          <h2 className="text-3xl md:text-5xl font-subheading mt-2 mb-6 text-center font-bold">Partner with <span className="bg-gradient-to-r from-orange-600 via-button to-button
-               text-transparent bg-clip-text ">Dazzle </span>Consulting</h2>
-          <p className="font-content text-xl text-gray-700 mb-10">
-            Turn insights into impact. Let's shape the future—together.
-          </p>
-
-          <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.98 }} className="inline-block">
-            <Link
-              href="/"
-              className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-orange-600 via-button to-button text-white font-subheading text-lg rounded-xl shadow-lg hover:bg-red-700 transition-all duration-300 group"
-            >
-              Start Your Transformation
-              <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
-            </Link>
-          </motion.div>
-        </motion.div>
       </div>
     </section>
   )
 }
-
