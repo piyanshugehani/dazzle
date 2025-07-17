@@ -25,7 +25,7 @@ const caseStudiesData: CaseStudy[] = [
     image: seagram.src,
     title: "Fuel Vodka Packaging Research for Seagram's",
     summary:
-      "Dazzle Consultancy conducted an in-depth study for Seagram's to analyze consumer perceptions and preferences related to the packaging of Fuel Vodka. The goal was to gather insights that could help enhance brand appeal and market positioning.",
+      "Our Consultancy conducted an in-depth study for Seagram's to analyze consumer perceptions and preferences related to the packaging of Fuel Vodka. The goal was to gather insights that could help enhance brand appeal and market positioning.",
     learnMoreLink: "/case-studies/seagrams",
     details: {
       objective:
@@ -55,7 +55,7 @@ const caseStudiesData: CaseStudy[] = [
     image: sol.src,
     title: 'Audience Research for "Meethi Churi No.1" (SOL Productions)',
     summary:
-      'Dazzle Consultancy conducted a comprehensive study for SOL Productions to analyze audience engagement and reception of the TV program "Meethi Churi No.1", which aired on Imagine Channel. The goal was to evaluate viewer preferences and gauge the show\'s impact.',
+      'Our Consultancy conducted a comprehensive study for SOL Productions to analyze audience engagement and reception of the TV program "Meethi Churi No.1", which aired on Imagine Channel. The goal was to evaluate viewer preferences and gauge the show\'s impact.',
     learnMoreLink: "/case-studies/sol-productions",
     details: {
       objective:
@@ -77,7 +77,7 @@ const caseStudiesData: CaseStudy[] = [
       impactSummary:
         "With these insights, SOL Productions was able to refine its content strategy to better appeal to its target audience, enhancing both viewership and engagement.",
       whyDazzle:
-        "At Dazzle Consultancy, we specialize in data-driven audience insights, enabling production houses like SOL Productions to make informed decisions that drive higher viewership and stronger brand loyalty.",
+        "At Our Consultancy, we specialize in data-driven audience insights, enabling production houses like SOL Productions to make informed decisions that drive higher viewership and stronger brand loyalty.",
     },
   },
   {
@@ -85,7 +85,7 @@ const caseStudiesData: CaseStudy[] = [
     image: samsung.src,
     title: "Advertising Tracking Research for Samsung",
     summary:
-      "Dazzle Consultancy conducted an extensive advertising tracking research project for Samsung to measure the effectiveness, reach, and impact of their advertisements across key metropolitan and Tier 1 cities in India.",
+      "Our Consultancy conducted an extensive advertising tracking research project for Samsung to measure the effectiveness, reach, and impact of their advertisements across key metropolitan and Tier 1 cities in India.",
     learnMoreLink: "/case-studies/samsung",
     details: {
       objective:
@@ -125,7 +125,7 @@ const caseStudiesData: CaseStudy[] = [
     image: itc.src,
     title: "Shop Census for ITC Limited (Bingo)",
     summary:
-      "Dazzle Consultancy conducted a comprehensive shop census for ITC Limited to map the availability, distribution, and retailer presence of Bingo! products in Mumbai.",
+      "Our Consultancy conducted a comprehensive shop census for ITC Limited to map the availability, distribution, and retailer presence of Bingo! products in Mumbai.",
     learnMoreLink: "/case-studies/itc-limited",
     details: {
       objective:
@@ -179,7 +179,7 @@ const caseStudiesData: CaseStudy[] = [
         "Enabled data-backed decision making before media spend."
       ],
       impactSummary: "The Predictorate Model enabled clients to make scientifically validated campaign choices, optimizing returns and minimizing post-launch risk.",
-      whyDazzle: "Dazzle Consultancy's expertise in predictive analytics and consumer choice modeling empowers brands to test strategies before market deployment, saving cost and improving performance."
+      whyDazzle: "Our Consultancy's expertise in predictive analytics and consumer choice modeling empowers brands to test strategies before market deployment, saving cost and improving performance."
     }
   }
 ]

@@ -18,6 +18,7 @@ import {
 } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
+import research from "./../../public/rest/research.webp"
 
 const fadeIn = {
   initial: { opacity: 0, y: 20 },
@@ -59,7 +60,7 @@ export default function MethodologiesPage() {
         "Focus Groups capture diverse opinions", // 38 chars
         "Panel studies track evolving trends", // 38 chars
       ],
-      image: "https://images.unsplash.com/photo-1561485010-84de4c6f06b9?q=80&w=1780&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      image: research,
     },
   ];
   

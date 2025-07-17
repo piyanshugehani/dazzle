@@ -341,22 +341,7 @@ const allLogos = [
       )
     }
   },
-  { 
-    name: "predictorate", 
-    id: 22, 
-    img: function LogoImage(props: SVGProps<SVGSVGElement>) {
-      return (
-        <Image
-          src="/client-list/predd.png"
-          alt="predd"
-          width={200}
-          height={100}
-          style={{ objectFit: 'contain', maxWidth: '100%',height:'100%' }}
-          priority
-        />
-      )
-    }
-  },
+  
 ];
 
 export function LogoCarouselDemo() {

@@ -4,6 +4,10 @@ import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import Image from "next/image";
+import { complex } from "./../public/rest/complex.jpeg";
+import drive from "./../public/rest/drive.webp";
+import future from "./../public/rest/future.jpeg";
+import optimize from "./../public/rest/optimize.webp";
 
 const BenefitsWheel = () => {
   const controls = useAnimation();
@@ -16,28 +20,28 @@ const BenefitsWheel = () => {
       description:
         "Target ideal customers with precision, increasing conversion rates and lifetime value through data-driven acquisition strategies.",
       image:
-        "https://imageio.forbes.com/specials-images/imageserve/671028a5de26c8c57c20b76c/0x0.jpg?format=jpg&height=900&width=1600&fit=bounds",
+        drive,
     },
     {
       title: "Optimize Engagement",
       description:
         "Create seamless experiences across all touchpoints that resonate with your audience and drive meaningful interactions.",
       image:
-        "https://books.forbes.com/wp-content/uploads/2022/12/bigstock-Overjoyed-Happy-Diverse-Busine-380114455.jpg",
+        optimize,
     },
     {
       title: "Future-proof Your Brand",
       description:
         "Stay ahead of market shifts with predictive insights that enable nimble adaptation to emerging trends and consumer behaviors.",
       image:
-        "https://vivacf.net/wp-content/uploads/2023/07/How-to-Future-proof-Your-Business-Finances.jpg",
+        future,
     },
     {
       title: "Transform Complex Data",
       description:
         "Convert overwhelming information into clear, actionable competitive advantages that drive strategic decision-making.",
       image:
-        "https://johpartners.com/wp-content/uploads/2023/12/Human-Element-of-Transformation-joh-partners-1024x683.webp",
+        complex,
     },
   ];
 
