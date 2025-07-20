@@ -4,7 +4,7 @@ import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import Image from "next/image";
-import { complex } from "./../public/rest/complex.jpeg";
+import complex from "./../public/rest/complex.jpeg";
 import drive from "./../public/rest/drive.webp";
 import future from "./../public/rest/future.jpeg";
 import optimize from "./../public/rest/optimize.webp";

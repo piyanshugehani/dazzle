@@ -25,7 +25,7 @@ const caseStudiesData: CaseStudy[] = [
     image: seagram.src,
     title: "Fuel Vodka Packaging Research for Seagram's",
     summary:
-      "Our Consultancy conducted an in-depth study for Seagram's to analyze consumer perceptions and preferences related to the packaging of Fuel Vodka. The goal was to gather insights that could help enhance brand appeal and market positioning.",
+      "Our Consultants conducted an in-depth study for Seagram's to analyze consumer perceptions and preferences related to the packaging of Fuel Vodka. The goal was to gather insights that could help enhance brand appeal and market positioning.",
     learnMoreLink: "/case-studies/seagrams",
     details: {
       objective:
@@ -298,9 +298,9 @@ export default function CaseStudies({ refer }: { refer: any }) {
             Case Studies
           </span>
         </h2>
-        <p className="text-lg text-gray-800 font-content text-center mt-4 mb-8">
+        {/* <p className="text-lg text-gray-800 font-content text-center mt-4 mb-8">
           See how we have helped our clients achieve their goals.
-        </p>
+        </p> */}
 
         <div className="relative max-w-7xl mx-auto">
           {/* Navigation Buttons */}
